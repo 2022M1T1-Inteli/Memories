@@ -8,7 +8,7 @@
 
 ## Nome do Grupo
 
-## Integrantes: <a href="#">Alberto Rocha Miranda</a>, <a href="#">Beatriz Arruda Fontenelle</a>, <a href="#">Erik Bonn Freundt</a>, <a href="#">Fernando Tavares Bertholdo</a>, <a href="#">Gustavo Ferreira de Oliveira</a>, <a href="#">Luiz Felipe Kama Alencar</a>, <a href="#">Mariana Lema</a>, <a href="#">Rafael Alves Cabral</a>
+## Integrantes: <a target="_blank" href="//linkedin.com/in/alberto-da-rocha-miranda-614315232/">Alberto Rocha Miranda</a>, <a target="_blank" href="//linkedin.com/in/erik-bonn-freundt-119619210/">Erik Bonn Freundt</a>, <a target="_blank" href="//linkedin.com/in/fernando-tavares-bertholdo-199b60173/">Fernando Tavares Bertholdo</a>, <a target="_blank" href="//linkedin.com/in/gustavo-ferreira-aa8050220/">Gustavo Ferreira de Oliveira</a>, <a target="_blank" href="//linkedin.com/in/luiz-felipe-kama-alencar-722935142/">Luiz Felipe Kama Alencar</a>, <a target="_blank" href="//linkedin.com/in/mariana-lema-9861ba21b/">Mariana Lema</a>, <a target="_blank" href="//linkedin.com/in/rafael-alves-cabral/">Rafael Alves Cabral</a>
 
 ## Descrição
 
@@ -135,6 +135,6 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 Aqui estão as referências usadas no projeto.
 
-1. <https://github.com/iuricode/readme-template>
+1. Canal HeartBeast do Youtube - <https://www.youtube.com/watch?v=mAbG8Oi-SvQ&list=PL9FzW-m48fn2SlrW0KoLT4n5egNdX-W9a>
 2. <https://github.com/gabrieldejesus/readme-model>
 3. <https://creativecommons.org/share-your-work/>
