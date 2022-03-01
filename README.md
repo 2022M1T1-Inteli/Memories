@@ -14,7 +14,7 @@
 
 📜 Descrição curta sobre o que seu projeto faz.
 <br><br>
-Meu projeto é um exemplo de como utilizar o github.
+O jogo Memories tem como objetivo ensinar os funcionários da Ambev sobre diversidade.
 <br><br>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/65983794/156167759-df96ff2b-956f-452a-9ca9-9b79137423b7.png" alt="MEMORIES" border="0">
@@ -123,13 +123,17 @@ A cada atualização os detalhes devem ser lançados aqui.
 * 0.2.0 - 15/01/2022
     * MUDANÇA: Remove `setDefaultXYZ()`
     * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.1.1 - 25/02/2022
+    * MUDANÇA: Organização das pastas
+    * ADD: Imagens dos icones, mapas e avatares do jogo
+* 0.1. - 18/01/2022
+    * UPLOAD: Primeira versão do jogo
+      * Mecânica inicial do jogo
+* 0.0.1 - 11/02/2022
+    * EDIÇÕES: GDD e no repositorio do GitHub
+* 0.0.1 - 08/02/2022
+    * Início de desenvolvimento do jogo
+    * Criação do GitHub
 
 ## 📋 Licença/License
 
