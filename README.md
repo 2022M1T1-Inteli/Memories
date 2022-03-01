@@ -4,9 +4,9 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do Projeto
+# Memories
 
-## Nome do Grupo
+## Amdevs
 
 ## Integrantes: <a target="_blank" href="//linkedin.com/in/alberto-da-rocha-miranda-614315232/">Alberto Rocha Miranda</a>, <a target="_blank" href="//linkedin.com/in/erik-bonn-freundt-119619210/">Erik Bonn Freundt</a>, <a target="_blank" href="//linkedin.com/in/fernando-tavares-bertholdo-199b60173/">Fernando Tavares Bertholdo</a>, <a target="_blank" href="//linkedin.com/in/gustavo-ferreira-aa8050220/">Gustavo Ferreira de Oliveira</a>, <a target="_blank" href="//linkedin.com/in/luiz-felipe-kama-alencar-722935142/">Luiz Felipe Kama Alencar</a>, <a target="_blank" href="//linkedin.com/in/mariana-lema-9861ba21b/">Mariana Lema</a>, <a target="_blank" href="//linkedin.com/in/rafael-alves-cabral/">Rafael Alves Cabral</a>
 
