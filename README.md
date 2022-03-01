@@ -17,7 +17,7 @@
 O jogo Memories tem como objetivo ensinar os funcionários da Ambev sobre diversidade.
 <br><br>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/65983794/156167759-df96ff2b-956f-452a-9ca9-9b79137423b7.png" alt="MEMORIES" border="0">
+<img src="https://user-images.githubusercontent.com/65983794/156167759-df96ff2b-956f-452a-9ca9-9b79137423b7.png" style="margin-left:auto;margin-right:auto" alt="MEMORIES" border="0">
   Game by <a href="http://www.nyphotographic.com/">Amdevs</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
 </p>
 
