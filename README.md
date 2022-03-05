@@ -118,11 +118,9 @@ Coloque código do prompt de comnando se for necessário
 
 A cada atualização os detalhes devem ser lançados aqui.
 
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
+
 * 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
+    * ADD: Sons, Tela Inicial, Sprites e elementos ao mapa principal (Casas, Ruas e NPCs)
 * 0.1.1 - 25/02/2022
     * MUDANÇA: Organização das pastas
     * ADD: Imagens dos icones, mapas e avatares do jogo
