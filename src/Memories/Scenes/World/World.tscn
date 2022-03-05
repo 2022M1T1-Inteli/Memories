@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://Assets/World/CliffTileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/World/GrassBackground.png" type="Texture" id=2]
@@ -6,6 +6,15 @@
 [ext_resource path="res://Scenes/Bush/Bush.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Tree/Tree.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Music and Sounds/Music.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Scenes/Buildings/Cabana.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Buildings/Casa-com-trepadeira.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Buildings/Cabana-de-Palha.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Buildings/Casa-de-Madeira.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Buildings/Casa-de-palha.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/NPCs/Homen-Negro.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/NPCs/Cadeirante.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/NPCs/Pessoa-LGBTQI+.tscn" type="PackedScene" id=15]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -481,6 +490,9 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=52]
+extents = Vector2( 9, 4 )
+
 [sub_resource type="RectangleShape2D" id=50]
 extents = Vector2( 9, 280.5 )
 
@@ -489,20 +501,23 @@ extents = Vector2( 496.5, 11 )
 
 [node name="Word" type="Node2D"]
 
-[node name="background" type="Sprite" parent="."]
-position = Vector2( 160, 91 )
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 143, 89 )
 scale = Vector2( 1, 1.02222 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1280, 900 )
 
-[node name="estrada" type="TileMap" parent="."]
+[node name="Estrada" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -393213, 0, 4, -393212, 0, 196609, -393211, 0, 196609, -393210, 0, 196609, -393209, 0, 196609, -393208, 0, 7, -262159, 0, 4, -262158, 0, 196609, -262157, 0, 196609, -262156, 0, 196609, -262155, 0, 196609, -262154, 0, 196609, -262153, 0, 196609, -262152, 0, 196609, -262151, 0, 196609, -262150, 0, 196609, -262149, 0, 196609, -262148, 0, 196609, -262147, 0, 196609, -262146, 0, 196609, -262145, 0, 196609, -327680, 0, 196609, -327679, 0, 196609, -327678, 0, 196609, -327677, 0, 196615, -327672, 0, 196612, -327671, 0, 8, -327670, 0, 196609, -327669, 0, 196609, -327668, 0, 196609, -327667, 0, 196609, -327666, 0, 196609, -327665, 0, 196609, -327664, 0, 196609, -327663, 0, 196609, -327662, 0, 196609, -327661, 0, 196609, -327660, 0, 196609, -327659, 0, 196609, -327658, 0, 196609, -327657, 0, 7, -196624, 0, 4, -196623, 0, 196615, -262135, 0, 65539, -262121, 0, 65539, -131088, 0, 65539, -196599, 0, 131076, -196598, 0, 2, -196585, 0, 65539, -65552, 0, 65539, -131063, 0, 65536, -131062, 0, 65538, -131049, 0, 65539, -16, 0, 65539, -65527, 0, 65536, -65526, 0, 65538, -65513, 0, 65539, 65520, 0, 65539, 9, 0, 65536, 10, 0, 65538, 23, 0, 65539, 131056, 0, 65539, 65545, 0, 65536, 65546, 0, 65538, 65559, 0, 65539, 196592, 0, 196612, 196593, 0, 196609, 196594, 0, 196609, 196595, 0, 196609, 196596, 0, 196609, 196597, 0, 7, 131081, 0, 65536, 131082, 0, 262149, 131083, 0, 196609, 131084, 0, 196609, 131085, 0, 196609, 131086, 0, 7, 131095, 0, 65539, 262133, 0, 196612, 262134, 0, 196609, 262135, 0, 196609, 262136, 0, 196609, 262137, 0, 196609, 262138, 0, 7, 196617, 0, 65536, 196618, 0, 65538, 196622, 0, 196612, 196623, 0, 7, 196631, 0, 65539, 327674, 0, 196612, 327675, 0, 7, 262153, 0, 65536, 262154, 0, 65538, 262159, 0, 65539, 262167, 0, 65539, 393211, 0, 65539, 327689, 0, 65536, 327690, 0, 65538, 327695, 0, 196612, 327696, 0, 196609, 327697, 0, 196609, 327698, 0, 196609, 327699, 0, 196609, 327700, 0, 196609, 327701, 0, 196609, 327702, 0, 8, 327703, 0, 196615, 458747, 0, 65539, 393222, 0, 4, 393223, 0, 196609, 393224, 0, 196609, 393225, 0, 262150, 393226, 0, 65538, 393238, 0, 65539, 524283, 0, 65539, 458754, 0, 4, 458755, 0, 196609, 458756, 0, 196609, 458757, 0, 196609, 458758, 0, 196615, 458761, 0, 65536, 458762, 0, 65538, 458774, 0, 65539, 589819, 0, 65539, 524290, 0, 65539, 524297, 0, 65536, 524298, 0, 65538, 524310, 0, 65539, 655353, 0, 4, 655354, 0, 196609, 655355, 0, 196616, 655356, 0, 196609, 655357, 0, 196609, 655358, 0, 196609, 655359, 0, 196609, 589824, 0, 196609, 589825, 0, 196609, 589826, 0, 196615, 589833, 0, 65536, 589834, 0, 65538, 589846, 0, 65539, 720886, 0, 4, 720887, 0, 196609, 720888, 0, 196609, 720889, 0, 196615, 655369, 0, 65536, 655370, 0, 65538, 655382, 0, 131076, 655383, 0, 2, 786421, 0, 0, 786422, 0, 131079, 720905, 0, 65536, 720906, 0, 65538, 720918, 0, 65536, 720919, 0, 65538, 851957, 0, 65536, 851958, 0, 65538, 786441, 0, 65536, 786442, 0, 65538, 786454, 0, 65536, 786455, 0, 65538, 917492, 0, 0, 917493, 0, 131078, 917494, 0, 65538, 851977, 0, 65536, 851978, 0, 262149, 851979, 0, 196609, 851980, 0, 196609, 851981, 0, 196609, 851982, 0, 196609, 851983, 0, 196609, 851984, 0, 196609, 851985, 0, 196609, 851986, 0, 196609, 851987, 0, 196609, 851988, 0, 196609, 851989, 0, 196609, 851990, 0, 196614, 851991, 0, 196613, 851992, 0, 7, 983027, 0, 4, 983028, 0, 196614, 983029, 0, 131073, 983030, 0, 65543, 917513, 0, 65536, 917514, 0, 65538, 917528, 0, 65539, 1048562, 0, 4, 1048563, 0, 196615, 1048566, 0, 65539, 983049, 0, 65540, 983050, 0, 131074, 983064, 0, 196612, 983065, 0, 7, 1114097, 0, 4, 1114098, 0, 196615, 1114102, 0, 65539, 1048583, 0, 4, 1048584, 0, 196609, 1048585, 0, 196615, 1048601, 0, 65539, 1179630, 0, 196608, 1179631, 0, 196609, 1179632, 0, 196609, 1179633, 0, 196615, 1179638, 0, 65539, 1114115, 0, 4, 1114116, 0, 196609, 1114117, 0, 196609, 1114118, 0, 196609, 1114119, 0, 196615, 1114136, 0, 4, 1114137, 0, 196615, 1245174, 0, 196612, 1245175, 0, 196609, 1245176, 0, 196609, 1245177, 0, 196609, 1245178, 0, 196609, 1245179, 0, 7, 1179651, 0, 65539, 1179669, 0, 196608, 1179670, 0, 196609, 1179671, 0, 196609, 1179672, 0, 196615, 1310715, 0, 196612, 1310716, 0, 196609, 1310717, 0, 196609, 1310718, 0, 196609, 1310719, 0, 196609, 1245184, 0, 196609, 1245185, 0, 196609, 1245186, 0, 196609, 1245187, 0, 196615, 1245201, 0, 4, 1245202, 0, 196609, 1245203, 0, 196609, 1245204, 0, 196610, 1310734, 0, 196608, 1310735, 0, 196609, 1310736, 0, 196609, 1310737, 0, 196615 )
+tile_data = PoolIntArray( -393213, 0, 4, -393212, 0, 196609, -393211, 0, 196609, -393210, 0, 196609, -393209, 0, 196609, -393208, 0, 7, -262159, 0, 4, -262158, 0, 196609, -262157, 0, 196609, -262156, 0, 196609, -262155, 0, 196609, -262154, 0, 196609, -262153, 0, 196609, -262152, 0, 196609, -262151, 0, 196609, -262150, 0, 196609, -262149, 0, 196609, -262148, 0, 196609, -262147, 0, 196609, -262146, 0, 196609, -262145, 0, 196609, -327680, 0, 196609, -327679, 0, 196609, -327678, 0, 196609, -327677, 0, 196615, -327672, 0, 196612, -327671, 0, 8, -327670, 0, 196609, -327669, 0, 196609, -327668, 0, 196609, -327667, 0, 196609, -327666, 0, 196609, -327665, 0, 196609, -327664, 0, 196609, -327663, 0, 196609, -327662, 0, 196609, -327661, 0, 196609, -327660, 0, 196609, -327659, 0, 196609, -327658, 0, 196609, -327657, 0, 7, -196624, 0, 4, -196623, 0, 196615, -262135, 0, 65539, -262121, 0, 65539, -131088, 0, 65539, -196599, 0, 131076, -196598, 0, 2, -196585, 0, 65539, -65552, 0, 65539, -131063, 0, 65536, -131062, 0, 65538, -131049, 0, 65539, -16, 0, 65539, -65527, 0, 65536, -65526, 0, 65538, -65513, 0, 65539, 65520, 0, 65539, 9, 0, 65536, 10, 0, 262149, 11, 0, 196610, 23, 0, 65539, 131056, 0, 65539, 65545, 0, 65536, 65546, 0, 65538, 65559, 0, 65539, 196592, 0, 196612, 196593, 0, 196609, 196594, 0, 196609, 196595, 0, 196609, 196596, 0, 196609, 196597, 0, 7, 131081, 0, 65536, 131082, 0, 262149, 131083, 0, 196609, 131084, 0, 196609, 131085, 0, 196609, 131086, 0, 7, 131095, 0, 65539, 262133, 0, 196612, 262134, 0, 196609, 262135, 0, 196609, 262136, 0, 196609, 262137, 0, 196609, 262138, 0, 7, 196617, 0, 65536, 196618, 0, 65538, 196622, 0, 196612, 196623, 0, 7, 196631, 0, 65539, 327674, 0, 196612, 327675, 0, 7, 262153, 0, 65536, 262154, 0, 65538, 262159, 0, 65539, 262167, 0, 65539, 393211, 0, 65539, 327689, 0, 65536, 327690, 0, 65538, 327695, 0, 196612, 327696, 0, 196609, 327697, 0, 196609, 327698, 0, 196609, 327699, 0, 196609, 327700, 0, 196609, 327701, 0, 196609, 327702, 0, 8, 327703, 0, 196615, 458747, 0, 65539, 393222, 0, 4, 393223, 0, 196609, 393224, 0, 196609, 393225, 0, 262150, 393226, 0, 65538, 393238, 0, 65539, 524283, 0, 65539, 458754, 0, 4, 458755, 0, 196609, 458756, 0, 196609, 458757, 0, 196609, 458758, 0, 196615, 458761, 0, 65536, 458762, 0, 65538, 458774, 0, 65539, 589819, 0, 65539, 589821, 0, 0, 589822, 0, 2, 524290, 0, 65539, 524297, 0, 65536, 524298, 0, 65538, 524310, 0, 65539, 655353, 0, 0, 655354, 0, 5, 655355, 0, 196616, 655356, 0, 196609, 655357, 0, 196614, 655358, 0, 196613, 655359, 0, 196609, 589824, 0, 196609, 589825, 0, 196609, 589826, 0, 196615, 589833, 0, 65536, 589834, 0, 65538, 589846, 0, 65539, 720886, 0, 4, 720887, 0, 196609, 720888, 0, 196609, 720889, 0, 196614, 720890, 0, 131074, 655369, 0, 65536, 655370, 0, 65538, 655382, 0, 131076, 655383, 0, 2, 786421, 0, 0, 786422, 0, 131079, 720905, 0, 65536, 720906, 0, 65538, 720918, 0, 65536, 720919, 0, 65538, 851957, 0, 65536, 851958, 0, 65538, 786441, 0, 65536, 786442, 0, 65538, 786454, 0, 65536, 786455, 0, 65538, 917492, 0, 0, 917493, 0, 131078, 917494, 0, 65538, 851977, 0, 65536, 851978, 0, 262149, 851979, 0, 196609, 851980, 0, 196609, 851981, 0, 196609, 851982, 0, 196609, 851983, 0, 196609, 851984, 0, 196609, 851985, 0, 196609, 851986, 0, 196609, 851987, 0, 196609, 851988, 0, 196609, 851989, 0, 196609, 851990, 0, 196614, 851991, 0, 196613, 851992, 0, 7, 983027, 0, 4, 983028, 0, 196614, 983029, 0, 131073, 983030, 0, 65543, 917513, 0, 65536, 917514, 0, 65538, 917528, 0, 65539, 1048562, 0, 4, 1048563, 0, 196615, 1048566, 0, 65539, 983049, 0, 65540, 983050, 0, 131074, 983064, 0, 196612, 983065, 0, 7, 1114095, 0, 0, 1114096, 0, 1, 1114097, 0, 5, 1114098, 0, 196615, 1114102, 0, 65539, 1048583, 0, 4, 1048584, 0, 196609, 1048585, 0, 196615, 1048601, 0, 65539, 1179630, 0, 196608, 1179631, 0, 196614, 1179632, 0, 131073, 1179633, 0, 131074, 1179638, 0, 65539, 1114115, 0, 4, 1114116, 0, 196609, 1114117, 0, 196609, 1114118, 0, 196609, 1114119, 0, 196615, 1114136, 0, 4, 1114137, 0, 196615, 1245174, 0, 196612, 1245175, 0, 196609, 1245176, 0, 196609, 1245177, 0, 196609, 1245178, 0, 196609, 1245179, 0, 7, 1179651, 0, 65539, 1179668, 0, 4, 1179669, 0, 196609, 1179670, 0, 196609, 1179671, 0, 196609, 1179672, 0, 196615, 1310715, 0, 196612, 1310716, 0, 196609, 1310717, 0, 196609, 1310718, 0, 196609, 1310719, 0, 196609, 1245184, 0, 196609, 1245185, 0, 196609, 1245186, 0, 196609, 1245187, 0, 196615, 1245201, 0, 4, 1245202, 0, 196609, 1245203, 0, 196609, 1245204, 0, 196615, 1310734, 0, 196608, 1310735, 0, 196609, 1310736, 0, 196609, 1310737, 0, 196615 )
 
-[node name="montanha" type="TileMap" parent="."]
+[node name="Cabana" parent="Estrada" instance=ExtResource( 8 )]
+position = Vector2( -223, -6 )
+
+[node name="Montanha" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 format = 1
@@ -510,7 +525,40 @@ tile_data = PoolIntArray( -720912, 0, 0, -720911, 0, 1, -720910, 0, 1, -720909, 
 
 [node name="Player" type="YSort" parent="."]
 
+[node name="Casas" type="YSort" parent="Player"]
+
+[node name="Cabana" parent="Player/Casas" instance=ExtResource( 8 )]
+position = Vector2( 93, -73 )
+
+[node name="Cabana-de-Palha" parent="Player/Casas" instance=ExtResource( 10 )]
+position = Vector2( 200, -5 )
+
+[node name="Cabana3" parent="Player/Casas" instance=ExtResource( 9 )]
+position = Vector2( 27, -12 )
+
+[node name="Cabana4" parent="Player/Casas" instance=ExtResource( 11 )]
+position = Vector2( 66, 91 )
+
+[node name="Cabana2" parent="Player/Casas" instance=ExtResource( 12 )]
+position = Vector2( -34, 121 )
+
+[node name="Cabana5" parent="Player/Casas" instance=ExtResource( 12 )]
+position = Vector2( 22, -102 )
+
 [node name="Player" parent="Player" instance=ExtResource( 6 )]
+position = Vector2( 159, 86 )
+
+[node name="NPCs" type="YSort" parent="."]
+position = Vector2( -34, 121 )
+
+[node name="Homen-Negro" parent="NPCs" instance=ExtResource( 13 )]
+position = Vector2( 3, -265 )
+
+[node name="Area2D" type="Area2D" parent="NPCs/Homen-Negro"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Homen-Negro/Area2D"]
+position = Vector2( 152, 96 )
+shape = SubResource( 52 )
 
 [node name="Tree" type="YSort" parent="."]
 position = Vector2( 16, 128 )
@@ -591,7 +639,7 @@ position = Vector2( -168, -136 )
 position = Vector2( -64, -128 )
 
 [node name="Tree7" parent="Tree" instance=ExtResource( 5 )]
-position = Vector2( -296, -104 )
+position = Vector2( -314, -76 )
 
 [node name="Tree8" parent="Tree" instance=ExtResource( 5 )]
 position = Vector2( -296, -144 )
@@ -605,7 +653,10 @@ position = Vector2( 72, 184 )
 [node name="Tree3" parent="Tree" instance=ExtResource( 5 )]
 
 [node name="Tree31" parent="Tree" instance=ExtResource( 5 )]
-position = Vector2( 200, 16 )
+position = Vector2( 225, 25 )
+
+[node name="Cabana" parent="Tree/Tree31" instance=ExtResource( 9 )]
+position = Vector2( -39, 30 )
 
 [node name="Bush" type="YSort" parent="."]
 
@@ -631,7 +682,10 @@ position = Vector2( 456, 344 )
 position = Vector2( 405, 195 )
 
 [node name="Bush6" parent="Bush" instance=ExtResource( 4 )]
-position = Vector2( -216, 208 )
+position = Vector2( -191, 198 )
+
+[node name="Cabana" parent="Bush/Bush6" instance=ExtResource( 12 )]
+position = Vector2( -58, 36 )
 
 [node name="Bush7" parent="Bush" instance=ExtResource( 4 )]
 position = Vector2( 208, -104 )
@@ -652,7 +706,7 @@ position = Vector2( 96, 168 )
 position = Vector2( 280, 64 )
 
 [node name="Bush15" parent="Bush" instance=ExtResource( 4 )]
-position = Vector2( 88, 80 )
+position = Vector2( -17, 50 )
 
 [node name="Bush16" parent="Bush" instance=ExtResource( 4 )]
 position = Vector2( 192, 72 )
@@ -660,16 +714,13 @@ position = Vector2( 192, 72 )
 [node name="Grass" type="YSort" parent="."]
 
 [node name="grama2" parent="Grass" instance=ExtResource( 5 )]
-position = Vector2( 88, 16 )
-
-[node name="grama" parent="Grass" instance=ExtResource( 5 )]
-position = Vector2( 248, 168 )
+position = Vector2( 105, -7 )
 
 [node name="grama3" parent="Grass" instance=ExtResource( 5 )]
 position = Vector2( 24, 176 )
 
 [node name="grama4" parent="Grass" instance=ExtResource( 5 )]
-position = Vector2( 128, 48 )
+position = Vector2( 117, 71 )
 
 [node name="grama5" parent="Grass" instance=ExtResource( 5 )]
 position = Vector2( 304, 128 )
@@ -699,3 +750,39 @@ shape = SubResource( 51 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colunas/colunaBaixa"]
 position = Vector2( 160, 379 )
 shape = SubResource( 51 )
+
+[node name="SoundTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="Cabana" parent="." instance=ExtResource( 9 )]
+position = Vector2( 407, 31 )
+
+[node name="Cabana-de-Palha" parent="." instance=ExtResource( 10 )]
+position = Vector2( 276, -53 )
+
+[node name="Cabana2" parent="Cabana-de-Palha" instance=ExtResource( 8 )]
+position = Vector2( -28, 354 )
+
+[node name="Cabana3" parent="Cabana-de-Palha" instance=ExtResource( 11 )]
+position = Vector2( 157, 310 )
+
+[node name="Cabana4" parent="Cabana-de-Palha" instance=ExtResource( 9 )]
+position = Vector2( -282, 337 )
+
+[node name="Cabana-de-Palha" parent="Cabana-de-Palha" instance=ExtResource( 10 )]
+position = Vector2( -190, 306 )
+
+[node name="Cabana5" parent="Cabana-de-Palha" instance=ExtResource( 8 )]
+position = Vector2( -453, 317 )
+
+[node name="Cabana-de-Palha2" parent="Cabana-de-Palha" instance=ExtResource( 10 )]
+position = Vector2( -420, 128 )
+
+[node name="Cadeirante" parent="." instance=ExtResource( 14 )]
+position = Vector2( 196, 19 )
+
+[node name="Cadeirante" parent="Cadeirante" instance=ExtResource( 15 )]
+position = Vector2( 92, 272 )
+
+[connection signal="body_entered" from="NPCs/Homen-Negro/Area2D" to="Player/Player" method="_on_Area2D_body_entered"]

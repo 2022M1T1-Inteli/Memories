@@ -4,6 +4,7 @@ const ACELERACAO = 500
 const VELOCIDADE_MAX = 80
 const FRICCAO = 500
 var velocidade = Vector2.ZERO
+var isInside = false
 #variavel com a animação
 onready var animacaoPlayer = $AnimationPlayer
 #varivael que contem todas a amaração de todas as animações dos persongens
@@ -14,6 +15,8 @@ onready var animacaoState = animacaoTree.get("parameters/playback")
 
 
 func _physics_process(delta): 
+	isInside = false;
+	
 	#declaração e inicial do vetor
 	var input_vector = Vector2.ZERO
 	#calculo da posição do vetor no eixo x dando as coordenadas
@@ -36,3 +39,7 @@ func _physics_process(delta):
 		#calcula a velocidade para ficar parado	
 		velocidade = velocidade.move_toward(Vector2.ZERO, FRICCAO * delta)
 	velocidade = move_and_slide(velocidade)
+
+
+func _on_Area2D_body_entered(body):
+	get_tree().change_scene("res://Scenes/Tasks/Racismo.tscn")

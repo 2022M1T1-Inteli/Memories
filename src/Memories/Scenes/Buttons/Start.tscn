@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Buttons/Start.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Buttons/Start.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Buttons/Start-Selected.tres" type="StyleBox" id=3]
+[ext_resource path="res://Assets/Music and Sounds/Menu Move.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Music and Sounds/Menu Select.wav" type="AudioStream" id=5]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="StyleBoxFlat" id=3]
+draw_center = false
+corner_detail = 1
+shadow_color = Color( 1, 1, 1, 0.6 )
+shadow_size = 2
+
+[node name="Button" type="Button"]
+margin_left = 151.0
+margin_top = 63.0
+margin_right = 202.0
+margin_bottom = 84.0
+theme = SubResource( 1 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = true
+shortcut_in_tooltip = false
+icon = ExtResource( 1 )
+flat = true
+clip_text = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+reference_path = "res://Scenes/World/World.tscn"
+start_focused = true
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Buildings/Cabana.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.54055, 16.5 )
+
+[node name="Cabana" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.500023, 6.54055 )
+rotation = -1.5708
+shape = SubResource( 1 )
+
+[node name="Cabana" type="Sprite" parent="."]
+position = Vector2( -0.5, -1.65253 )
+scale = Vector2( 0.754386, 0.558687 )
+texture = ExtResource( 1 )
