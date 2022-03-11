@@ -40,6 +40,12 @@ func _physics_process(delta):
 		velocidade = velocidade.move_toward(Vector2.ZERO, FRICCAO * delta)
 	velocidade = move_and_slide(velocidade)
 
-
-func _on_Area2D_body_entered(body):
+# ao colidir com NPC do homem negro no mapa chama a função
+func _on_Homem_Negro_body_entered(body):
+	#Troca de Cena
 	get_tree().change_scene("res://Scenes/Tasks/Racismo.tscn")
+	
+# ao colidir com NPC do cadeirante no mapa chama a função
+func _on_Cadeirante_body_entered(body):
+	#Troca de Cena	
+	get_tree().change_scene("res://Scenes/Tasks/PCD-Home.tscn")	

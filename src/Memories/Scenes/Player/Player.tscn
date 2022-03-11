@@ -4,9 +4,8 @@
 [ext_resource path="res://Assets/Player/Player.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Player/Camera2D.gd" type="Script" id=3]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 4.0
-height = 4.0
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 2.5, 10 )
 
 [sub_resource type="Animation" id=6]
 resource_name = "CorrerBaixo"
@@ -235,8 +234,9 @@ hframes = 8
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1.5 )
 rotation = -1.5708
-shape = SubResource( 1 )
+shape = SubResource( 32 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/CorrerBaixo = SubResource( 6 )

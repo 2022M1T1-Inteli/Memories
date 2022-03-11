@@ -14,7 +14,6 @@ func _on_Previous_pressed():
 	print("btn1")
 	self.get_parent().volta_pagina()
 	
-
 func _on_Next_pressed():
 	print("btn2")
 	self.get_parent().vira_pagina()
