@@ -118,8 +118,10 @@ Coloque código do prompt de comnando se for necessário
 
 A cada atualização os detalhes devem ser lançados aqui.
 
-
-* 0.2.0 - 15/01/2022
+* 0.2.1 - 15/01/2022
+    * ADD: Tela Inicial, Sprites, elementos ao mapa principal (Casas, Ruas, Árvores, Pedras, Grama e NPCs) e Primeira missão do jogo
+    * REMOVE: Mapa Antigo
+* 0.2.0 - 04/02/2022
     * ADD: Sons, Tela Inicial, Sprites e elementos ao mapa principal (Casas, Ruas e NPCs)
 * 0.1.1 - 25/02/2022
     * MUDANÇA: Organização das pastas
