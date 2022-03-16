@@ -1,4 +1,6 @@
 extends Button
+
+
 export var reference_path = ""
 export(bool) var start_focused = false
 
@@ -21,24 +23,15 @@ func _ready():
 func _on_Button_mouse_entered():
 	# função ao passar o mouse em cima setando o design
 	grab_focus()
-	#toca o som
-	audioHover.play()
+	
+	
 
 func _on_Button_Pressed():
 	# função ao passar o click
 	#verifica se o caminho da cena não esta vazio
 	if(reference_path != ""):
-		#se não tiver toca o som de clicado
-		audioClick.play()
-		#faz com que o som seja tocado até o seu final
-		yield(audioClick, "finished")
-		#troca a cena
 		get_tree().change_scene(reference_path)
 	#se estiver vazio o caminho	
 	else:
-		#toca o som de clicado
-		audioClick.play()
-		#faz com que o som seja tocado até o seu final		
-		yield(audioClick, "finished")
 		#troca a cena		
-		get_tree().quit()
+		get_tree().change_scene("res://Scenes/World/World.tscn")

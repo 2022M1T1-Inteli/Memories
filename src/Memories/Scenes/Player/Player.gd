@@ -49,3 +49,10 @@ func _on_Homem_Negro_body_entered(body):
 func _on_Cadeirante_body_entered(body):
 	#Troca de Cena	
 	get_tree().change_scene("res://Scenes/Tasks/PCD-Home.tscn")	
+
+
+func _on_magdalene_area_body_entered(body):
+	if body.name == "Player" :
+		get_tree().change_scene("res://Scenes/Tasks/igualdade_de_genero_task.tscn")
+	
+	pass # Replace with function body.
