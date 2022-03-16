@@ -1,0 +1,12 @@
+[gd_scene format=2]
+
+[node name="Congrats" type="Node2D"]
+
+[node name="LineEdit" type="RichTextLabel" parent="."]
+margin_right = 320.0
+margin_bottom = 176.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "Parabéns!g"
+}

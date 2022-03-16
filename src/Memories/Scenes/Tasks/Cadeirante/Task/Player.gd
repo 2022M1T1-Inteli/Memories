@@ -11,8 +11,13 @@ var score = 0
 var paused = true
 var keyPressed = false
 
+onready var GameOverNode = get_parent().get_parent().get_parent().get_node("GameOverNode")
+onready var canvasLayer = get_parent().get_parent().get_node("CanvasLayer/scoreNow")
+onready var canvasLayerGO = get_parent().get_parent().get_parent().get_node("GameOverNode/CanvasLayerGO/finalScore")
+
 func _ready():
-	pass
+	pass	
+	
 
 func _physics_process(delta):
 	
@@ -40,7 +45,7 @@ func _physics_process(delta):
 		elif motion.y > 0 :
 			$AnimatedSprite.play("fall")
 		
-		get_parent().get_parent().get_node("CanvasLayer/Score").text = str(score)
+		get_parent().get_parent().get_node("CanvasLayer/scoreNow").text = str(score)
 		
 func Wall_reset():
 	var Wall_instance = Wall.instance()
@@ -61,11 +66,32 @@ func _on_Detect_area_entered(area):
 
 func _on_Detect_body_entered(body):
 	if body.name == "Walls":
-		get_tree().reload_current_scene()
-		
+		get_parent().get_parent().get_parent().get_node("GameOverNode/CanvasLayerGO/finalScore").text = str(score, " / 21")		
+		get_parent().get_parent().hide()
+		canvasLayer.hide()
+		GameOverNode.show()
+		canvasLayerGO.show()
 
 
-func _on_Button_pressed():
+func _on_PCDexit_pressed():
 	get_tree().change_scene("res://Scenes/Tasks/Cadeirante/Home/PCD-Home.tscn")
 	paused = false
 	get_tree().paused = false
+
+
+func _on_PCDstart_pressed():
+	get_tree().reload_current_scene()
+	
+#	get_parent().get_parent().show()
+#	GameOverNode.hide()
+	
+
+func _on_memoria_body_entered(body):
+	get_parent().get_parent().get_node("memoria").queue_free()
+
+func _on_memoria2_body_entered(body):
+	get_parent().get_parent().get_node("memoria2").queue_free()
+
+func _on_memoria3_body_entered(body):
+	get_parent().get_parent().get_node("memoria3").queue_free()
+	get_tree().change_scene("res://Scenes/Tasks/Cadeirante/Congrats.tscn")

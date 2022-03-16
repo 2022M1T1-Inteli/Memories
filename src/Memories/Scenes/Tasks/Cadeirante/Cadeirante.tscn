@@ -1,0 +1,233 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Assets/Cadeirante/City/sky.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Cadeirante/Fall/fall-000.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Cadeirante/City/light.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Cadeirante/Jump/jump-000.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Cadeirante/Idle/idle-000.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Tasks/Cadeirante/Task/Camera2D.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Buttons/Exit.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Tasks/Cadeirante/Task/WallNode.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Buttons/Start.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Tasks/Cadeirante/Task/Player.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/Tasks/Cadeirante/Task/memoria.gd" type="Script" id=11]
+[ext_resource path="res://Assets/Tasks/memoria.png" type="Texture" id=12]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 88 )
+
+[node name="Cadeirante" type="Node2D"]
+
+[node name="PCD-World2" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PCD-World2"]
+
+[node name="scoreNow" type="RichTextLabel" parent="PCD-World2/CanvasLayer"]
+margin_left = 153.0
+margin_top = 15.0
+margin_right = 193.0
+margin_bottom = 56.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerNode" type="Node2D" parent="PCD-World2"]
+pause_mode = 2
+position = Vector2( 0, 24 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Player" type="KinematicBody2D" parent="PCD-World2/PlayerNode"]
+position = Vector2( 80, 97 )
+script = ExtResource( 10 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PCD-World2/PlayerNode/Player"]
+position = Vector2( -36.5, -36 )
+polygon = PoolVector2Array( -6, -6, -6, -5, -13, -5, -13, -4, -14, -4, -14, -3, -11, -3, -11, 1, -14, 3, -14, 5, -15, 5, -15, 11, -14, 11, -14, 13, -10, 17, -4, 17, -3, 15, -2, 15, -2, 16, 0, 16, 0, 17, 4, 17, 5, 16, 6, 16, 6, 15, 7, 15, 7, 14, 10, 14, 10, 15, 11, 16, 14, 16, 15, 15, 15, 13, 13, 12, 12, 12, 12, 11, 9, 11, 9, 5, 8, 5, 8, 4, 8, 3, 7, 3, 7, 2, 5, 0, 5, -1, 4, -1, 4, -2, 1, -5, 1, -10, 2, -11, 2, -13, 1, -13, 1, -14, 0, -14, 0, -15, -5, -15, -5, -14, -6, -14, -6, -13, -7, -13, -7, -9, -6, -9 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="PCD-World2/PlayerNode/Player"]
+position = Vector2( -36.5, -35 )
+frames = SubResource( 4 )
+animation = "jump"
+
+[node name="Detect" type="Area2D" parent="PCD-World2/PlayerNode/Player"]
+position = Vector2( 38.5, 60 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="PCD-World2/PlayerNode/Player/Detect"]
+position = Vector2( -75.5, -96 )
+polygon = PoolVector2Array( -6, -7, -6, -6, -12, -6, -13, -6, -14, -5, -14, -2, -11, -2, -11, 0, -14, 2, -14, 4, -15, 4, -15, 12, -14, 12, -14, 14, -11, 18, -4, 18, -3, 16, -2, 16, -2, 17, 0, 17, 0, 18, 4, 18, 5, 17, 6, 17, 6, 16, 7, 16, 7, 15, 10, 15, 10, 15, 11, 17, 14, 17, 15, 16, 15, 12, 14, 11, 12, 11, 12, 10, 9, 10, 9, 5, 9, 4, 8, 4, 8, 3, 8, 2, 7, 1, 5, 0, 5, -1, 5, -2, 4, -3, 1, -5, 2, -10, 2, -11, 2, -14, 1, -14, 1, -15, 0, -15, 0, -16, -5, -16, -5, -15, -6, -15, -6, -14, -7, -14, -7, -13, -7, -9, -6, -9 )
+
+[node name="Resetter" type="Area2D" parent="PCD-World2/PlayerNode/Player"]
+position = Vector2( -310, 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PCD-World2/PlayerNode/Player/Resetter"]
+shape = SubResource( 3 )
+
+[node name="Light2D" type="Light2D" parent="PCD-World2/PlayerNode/Player"]
+position = Vector2( -35.5, -35 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+shadow_enabled = true
+
+[node name="Intrucao" type="Label" parent="PCD-World2/PlayerNode/Player"]
+margin_left = -119.0
+margin_top = -3.0
+margin_right = 56.0
+margin_bottom = 11.0
+text = "Precione espaço para jogar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WallNode" parent="PCD-World2" instance=ExtResource( 8 )]
+position = Vector2( 175, 96 )
+
+[node name="WallNode2" parent="PCD-World2" instance=ExtResource( 8 )]
+position = Vector2( 255, 80 )
+
+[node name="WallNode3" parent="PCD-World2" instance=ExtResource( 8 )]
+position = Vector2( 335, 97 )
+
+[node name="WallNode4" parent="PCD-World2" instance=ExtResource( 8 )]
+position = Vector2( 415, 64 )
+
+[node name="WallNode5" parent="PCD-World2" instance=ExtResource( 8 )]
+position = Vector2( 495, 72 )
+
+[node name="WallNode6" parent="PCD-World2" instance=ExtResource( 8 )]
+position = Vector2( 575, 95 )
+
+[node name="WallNode7" parent="PCD-World2" instance=ExtResource( 8 )]
+position = Vector2( 655, 114 )
+
+[node name="WallNode8" parent="PCD-World2" instance=ExtResource( 8 )]
+position = Vector2( 735, 96 )
+
+[node name="Camera2D" type="Camera2D" parent="PCD-World2"]
+position = Vector2( 80, 96 )
+zoom = Vector2( 1.5, 1.5 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BackGround" type="Sprite" parent="PCD-World2"]
+position = Vector2( -1.90735e-06, 71 )
+scale = Vector2( 200, 200 )
+z_index = -5
+texture = ExtResource( 1 )
+
+[node name="PCDexit" parent="PCD-World2" instance=ExtResource( 7 )]
+pause_mode = 2
+margin_left = -155.0
+margin_top = -35.0
+margin_right = -105.0
+margin_bottom = -15.0
+
+[node name="memoria" type="Area2D" parent="PCD-World2"]
+position = Vector2( 655, 114 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PCD-World2/memoria"]
+position = Vector2( 0.999973, -0.690468 )
+scale = Vector2( 0.031, 0.0229538 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="PCD-World2/memoria"]
+visible = false
+polygon = PoolVector2Array( -15, 14, 17, 14, 17, 6, 9, 6, 9, -2, 17, -2, 17, -10, 9, -10, 9, -18, -7, -18, -7, -10, -15, -10, -15, -2, -7, -2, -7, 6, -15, 6 )
+
+[node name="memoria2" type="Area2D" parent="PCD-World2"]
+position = Vector2( 1210, 110 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PCD-World2/memoria2"]
+position = Vector2( 0.999973, -0.690468 )
+scale = Vector2( 0.031, 0.0229538 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="PCD-World2/memoria2"]
+visible = false
+polygon = PoolVector2Array( -15, 14, 17, 14, 17, 6, 9, 6, 9, -2, 17, -2, 17, -10, 9, -10, 9, -18, -7, -18, -7, -10, -15, -10, -15, -2, -7, -2, -7, 6, -15, 6 )
+
+[node name="memoria3" type="Area2D" parent="PCD-World2"]
+position = Vector2( 1767, 82 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PCD-World2/memoria3"]
+position = Vector2( 0.999973, -0.690468 )
+scale = Vector2( 0.031, 0.0229538 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="PCD-World2/memoria3"]
+visible = false
+polygon = PoolVector2Array( -15, 14, 17, 14, 17, 6, 9, 6, 9, -2, 17, -2, 17, -10, 9, -10, 9, -18, -7, -18, -7, -10, -15, -10, -15, -2, -7, -2, -7, 6, -15, 6 )
+
+[node name="GameOverNode" type="Node2D" parent="."]
+visible = false
+position = Vector2( -80, 8 )
+
+[node name="CanvasLayerGO" type="CanvasLayer" parent="GameOverNode"]
+follow_viewport_enable = true
+
+[node name="finalScore" type="RichTextLabel" parent="GameOverNode/CanvasLayerGO"]
+visible = false
+margin_left = 63.0
+margin_top = 48.0
+margin_right = 100.0
+margin_bottom = 80.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "12/21
+"
+}
+
+[node name="Background" type="Sprite" parent="GameOverNode"]
+scale = Vector2( 200, 200 )
+texture = ExtResource( 1 )
+
+[node name="PCDstart" parent="GameOverNode" instance=ExtResource( 9 )]
+margin_left = 134.0
+margin_top = 107.0
+margin_right = 185.0
+margin_bottom = 128.0
+
+[connection signal="area_entered" from="PCD-World2/PlayerNode/Player/Detect" to="PCD-World2/PlayerNode/Player" method="_on_Detect_area_entered"]
+[connection signal="body_entered" from="PCD-World2/PlayerNode/Player/Detect" to="PCD-World2/PlayerNode/Player" method="_on_Detect_body_entered"]
+[connection signal="body_entered" from="PCD-World2/PlayerNode/Player/Resetter" to="PCD-World2/PlayerNode/Player" method="_on_Resetter_body_entered"]
+[connection signal="pressed" from="PCD-World2/PCDexit" to="PCD-World2/PlayerNode/Player" method="_on_PCDexit_pressed"]
+[connection signal="body_entered" from="PCD-World2/memoria" to="PCD-World2/PlayerNode/Player" method="_on_memoria_body_entered"]
+[connection signal="body_entered" from="PCD-World2/memoria2" to="PCD-World2/PlayerNode/Player" method="_on_memoria2_body_entered"]
+[connection signal="body_entered" from="PCD-World2/memoria3" to="PCD-World2/PlayerNode/Player" method="_on_memoria3_body_entered"]
+[connection signal="pressed" from="GameOverNode/PCDstart" to="PCD-World2/PlayerNode/Player" method="_on_PCDstart_pressed"]

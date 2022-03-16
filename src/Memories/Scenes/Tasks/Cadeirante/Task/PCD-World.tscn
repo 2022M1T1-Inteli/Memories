@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Tasks/Cadeirante/Task/WallNode.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Cadeirante/City/sky.png" type="Texture" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Scenes/Tasks/Cadeirante/Task/Camera2D.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Tasks/Cadeirante/Task/Player.gd" type="Script" id=8]
 [ext_resource path="res://Scenes/Buttons/Exit.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Tasks/memoria.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Tasks/Cadeirante/Task/memoria.gd" type="Script" id=11]
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -17,14 +19,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "fall",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "fall",
 "speed": 5.0
 } ]
 
@@ -34,30 +36,12 @@ extents = Vector2( 10, 88 )
 [node name="PCD-World" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-follow_viewport_enable = true
 
-[node name="Score" type="RichTextLabel" parent="CanvasLayer"]
-anchor_left = 0.25
-anchor_top = 0.533
-anchor_right = 0.25
-anchor_bottom = 0.533
-margin_left = -19.0
-margin_top = -85.94
-margin_right = 21.0
-margin_bottom = -45.94
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MaxScore" type="RichTextLabel" parent="CanvasLayer"]
-anchor_left = 0.25
-anchor_top = 0.533
-anchor_right = 0.25
-anchor_bottom = 0.533
-margin_left = -149.0
-margin_top = -85.94
-margin_right = -109.0
-margin_bottom = -45.94
+[node name="scoreNow" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 153.0
+margin_top = 15.0
+margin_right = 193.0
+margin_bottom = 56.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -152,14 +136,33 @@ scale = Vector2( 200, 200 )
 z_index = -5
 texture = ExtResource( 2 )
 
-[node name="Button" parent="." instance=ExtResource( 9 )]
+[node name="PCDexit" parent="." instance=ExtResource( 9 )]
 pause_mode = 2
 margin_left = -155.0
 margin_top = -35.0
 margin_right = -105.0
 margin_bottom = -15.0
 
+[node name="memoria" type="Area2D" parent="."]
+position = Vector2( 655, 114 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="memoria"]
+position = Vector2( 0.999973, -0.690468 )
+scale = Vector2( 0.031, 0.0229538 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="memoria"]
+visible = false
+polygon = PoolVector2Array( -15, 14, 17, 14, 17, 6, 9, 6, 9, -2, 17, -2, 17, -10, 9, -10, 9, -18, -7, -18, -7, -10, -15, -10, -15, -2, -7, -2, -7, 6, -15, 6 )
+
+[connection signal="ready" from="." to="PlayerNode/Player" method="_on_PCDWorld_ready"]
+[connection signal="tree_entered" from="." to="PlayerNode/Player" method="_on_PCDWorld_tree_entered"]
 [connection signal="area_entered" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_Detect_area_entered"]
 [connection signal="body_entered" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_Detect_body_entered"]
 [connection signal="body_entered" from="PlayerNode/Player/Resetter" to="PlayerNode/Player" method="_on_Resetter_body_entered"]
-[connection signal="pressed" from="Button" to="PlayerNode/Player" method="_on_Button_pressed"]
+[connection signal="pressed" from="PCDexit" to="PlayerNode/Player" method="_on_Button_pressed"]
+[connection signal="body_entered" from="memoria" to="PlayerNode/Player" method="_on_memoria_body_entered"]
