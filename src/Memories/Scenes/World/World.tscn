@@ -521,7 +521,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 extents = Vector2( 10, 4.5 )
 
 [sub_resource type="RectangleShape2D" id=52]
-extents = Vector2( 8, 4 )
+extents = Vector2( 8, 14.5 )
 
 [node name="Word" type="Node2D"]
 
@@ -573,11 +573,6 @@ position = Vector2( -271, -33 )
 [node name="SoundTheme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 autoplay = true
-
-[node name="Player" type="YSort" parent="."]
-
-[node name="Player" parent="Player" instance=ExtResource( 6 )]
-position = Vector2( 147, 89 )
 
 [node name="Eesquerda-1" type="YSort" parent="."]
 
@@ -1261,7 +1256,7 @@ position = Vector2( -31, -144 )
 [node name="Homen-Negro" parent="Centro-Meio/Homem_Negro" instance=ExtResource( 13 )]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Centro-Meio/Homem_Negro"]
-position = Vector2( 155, 96 )
+position = Vector2( 155, 85.5 )
 shape = SubResource( 52 )
 
 [node name="Poste" parent="Centro-Meio" instance=ExtResource( 22 )]
@@ -1793,6 +1788,11 @@ position = Vector2( 337, 261 )
 
 [node name="Tree" parent="Baixo-Direita-1" instance=ExtResource( 5 )]
 position = Vector2( 148, 311 )
+
+[node name="Player" type="YSort" parent="."]
+
+[node name="Player" parent="Player" instance=ExtResource( 6 )]
+position = Vector2( 147, 89 )
 
 [connection signal="body_entered" from="Direita-1/Cadeirante" to="Player/Player" method="_on_Cadeirante_body_entered"]
 [connection signal="body_entered" from="Centro-Meio/Homem_Negro" to="Player/Player" method="_on_Homem_Negro_body_entered"]
