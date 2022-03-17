@@ -1,17 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Assets/World/Tree.png" type="Texture" id=1]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 12.5, 6 )
-
 [node name="Tree" type="StaticBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.00001, 12.5 )
-rotation = -1.5708
-shape = SubResource( 1 )
 
 [node name="Tree" type="Sprite" parent="."]
 scale = Vector2( 0.705391, 0.71875 )
 texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2( 3.16466, 3.26956 )
+build_mode = 1
+polygon = PoolVector2Array( -6.3198, -6.72874, 2.52792, -6.42289, 2.84391, -5.81118, 6.3198, -5.81118, 6.3198, -1.22341, 4.10787, -1.22341, 4.10787, 1.52926, 2.21193, 1.52926, 2.21193, 2.75267, 1.57995, 3.36437, 0.63198, 3.36437, 0.63198, 5.19948, 1.57995, 6.11703, 1.57995, 6.42289, -2.21193, 6.42289, -2.21193, 5.81118, -1.57995, 5.19948, -0.947969, 5.19948, -0.947969, 3.97607, -2.21193, 3.36437, -2.21193, 2.75267, -4.42386, 2.75267, -4.73985, 2.44681, -4.73985, 0.917555, -4.10787, 0.305852, -1.26396, 0.305852, -1.26396, -0.917555, -1.89594, -2.14096, -6.3198, -2.14096 )

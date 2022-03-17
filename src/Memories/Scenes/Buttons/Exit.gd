@@ -7,6 +7,8 @@ onready var audioClick = $Click
 #instancia o player do audio click
 onready var audioHover = $Hover
 func _ready():
+	
+	
 #verifica se inciou selecionado
 	if(start_focused):
 		grab_focus()

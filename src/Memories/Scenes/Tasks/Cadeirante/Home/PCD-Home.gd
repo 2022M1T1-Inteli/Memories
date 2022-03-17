@@ -2,7 +2,7 @@ extends Node2D
 
 var pagina=0
 #texto da pergunta
-var texto=["Fala pra noix amigão","Vou te contar uma história de cadeirante","Senta que la vem história...", "Aceita a missão?"]
+var texto=["Fala pra noia amigão","Vou te contar uma história de cadeirante","Senta que la vem história...", "Aceita a missão?"]
 var controle = texto.size() - 1
 
 func _ready():
