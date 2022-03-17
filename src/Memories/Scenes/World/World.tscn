@@ -1808,13 +1808,13 @@ position = Vector2( 148, 311 )
 [node name="Player" parent="Player" instance=ExtResource( 6 )]
 position = Vector2( 147, 89 )
 
-[node name="Pause_Layer" parent="." instance=ExtResource( 45 )]
+[node name="Pause_Button" parent="Player/Player" instance=ExtResource( 44 )]
+margin_left = -156.0
+margin_top = -86.0
+margin_right = -134.0
+margin_bottom = -67.0
 
-[node name="Pause_Button" parent="." instance=ExtResource( 44 )]
-margin_left = -9.0
-margin_top = 3.0
-margin_right = 13.0
-margin_bottom = 22.0
+[node name="Pause_Layer" parent="." instance=ExtResource( 45 )]
 
 [connection signal="body_entered" from="Direita-1/Cadeirante" to="Player/Player" method="_on_Cadeirante_body_entered"]
 [connection signal="body_entered" from="Centro-Meio/Homem_Negro" to="Player/Player" method="_on_Homem_Negro_body_entered"]
