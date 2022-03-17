@@ -1,7 +1,17 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scenes/Level/Cadeirante/Walls.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Level/Cadeirante/City/stairs.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Cadeirante/Capacitismo.png" type="Texture" id=2]
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends StaticBody2D
+
+func _ready():
+	pass # Replace with function body.
+
+
+func _physics_process(delta):
+	position += Vector2(-1, 0)
+"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 200 )
@@ -16,11 +26,12 @@ extents = Vector2( 10, 80 )
 
 [node name="Walls" type="StaticBody2D" parent="."]
 scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 1 )
+script = SubResource( 4 )
 
 [node name="UpperWallSprite" type="Sprite" parent="Walls"]
-position = Vector2( 0, -280 )
-scale = Vector2( 2, 4 )
+position = Vector2( 3.05176e-05, -248.339 )
+rotation = 1.5708
+scale = Vector2( 0.750774, 0.750773 )
 texture = ExtResource( 2 )
 
 [node name="UpperWallColl" type="CollisionShape2D" parent="Walls"]
@@ -32,16 +43,17 @@ position = Vector2( 0, 120 )
 occluder = SubResource( 2 )
 
 [node name="LowerWallSprite2" type="Sprite" parent="Walls"]
-position = Vector2( 0, 282 )
-scale = Vector2( 2, 4 )
+position = Vector2( 0, 248 )
+rotation = 1.5708
+scale = Vector2( 0.750774, 0.750773 )
 texture = ExtResource( 2 )
 
 [node name="LowerWallColl2" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 0, 282 )
+position = Vector2( 0, 280 )
 shape = SubResource( 1 )
 
 [node name="LowerLightOccluder2D2" type="LightOccluder2D" parent="Walls"]
-position = Vector2( 0, 682 )
+position = Vector2( 0, 680 )
 occluder = SubResource( 2 )
 
 [node name="PointArea" type="Area2D" parent="Walls"]
