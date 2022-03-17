@@ -6,7 +6,7 @@ const MAXFALLSPEED = 200
 const GRAVITY = 5
 
 var motion = Vector2()
-var Wall = preload("res://Scenes/Tasks/Cadeirante/Task/WallNode.tscn")
+var Wall = preload("res://Scenes/Level/Cadeirante/Task/WallNode.tscn")
 var score = 0
 var paused = true
 var keyPressed = false
@@ -70,7 +70,7 @@ func _on_Detect_body_entered(body):
 		
 
 func _on_PCDexit_pressed():
-	get_tree().change_scene("res://Scenes/Tasks/Cadeirante/Home/PCD-Home.tscn")
+	get_tree().change_scene("res://Scenes/Dialogue/Cadeirante/PCD-Home.tscn")
 	paused = false
 	get_tree().paused = false
 
@@ -88,4 +88,4 @@ func _on_memoria2_body_entered(body):
 
 func _on_memoria3_body_entered(body):
 	get_parent().get_parent().get_node("memoria3").queue_free()
-	get_tree().change_scene("res://Scenes/Tasks/Cadeirante/Congrats.tscn")
+	get_tree().change_scene("res://Scenes/Level/Cadeirante/Congrats.tscn")
