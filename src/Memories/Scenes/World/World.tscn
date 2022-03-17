@@ -12,8 +12,8 @@
 [ext_resource path="res://Scenes/Buildings/Cabana-de-Palha.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Buildings/Casa-de-Madeira.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Buildings/Casa-de-palha.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/NPCs/Homen-Negro.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/NPCs/Cadeirante.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Characters/Afrodescendente/Homen-Negro.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Characters/Cadeirante/Cadeirante.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Buildings/Casa-com-Grama.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Buildings/Casa-simples.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/Grass/Grass.tscn" type="PackedScene" id=17]
@@ -42,7 +42,7 @@
 [ext_resource path="res://Scenes/Decorations/Fogueira.tscn" type="PackedScene" id=40]
 [ext_resource path="res://Scenes/Buildings/Toca.tscn" type="PackedScene" id=41]
 [ext_resource path="res://Scenes/Buildings/Mancao.tscn" type="PackedScene" id=42]
-[ext_resource path="res://Scenes/NPCs/Celeset_Magdalene.tscn" type="PackedScene" id=43]
+[ext_resource path="res://Scenes/Characters/Genero/Genero.tscn" type="PackedScene" id=43]
 [ext_resource path="res://Scenes/Pause/Pause_Button.tscn" type="PackedScene" id=44]
 [ext_resource path="res://Scenes/Pause/Pause_Layer.tscn" type="PackedScene" id=45]
 
@@ -1260,6 +1260,7 @@ position = Vector2( 19, -41 )
 position = Vector2( -31, -144 )
 
 [node name="Homen-Negro" parent="Centro-Meio/Homem_Negro" instance=ExtResource( 13 )]
+position = Vector2( -6, 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Centro-Meio/Homem_Negro"]
 position = Vector2( 155, 85.5 )

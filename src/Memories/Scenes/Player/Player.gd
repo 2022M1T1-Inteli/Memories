@@ -43,16 +43,16 @@ func _physics_process(delta):
 # ao colidir com NPC do homem negro no mapa chama a função
 func _on_Homem_Negro_body_entered(body):
 	#Troca de Cena
-	get_tree().change_scene("res://Scenes/Tasks/Racismo.tscn")
+	get_tree().change_scene("res://Scenes/Dialogue/Racismo.tscn")
 	
 # ao colidir com NPC do cadeirante no mapa chama a função
 func _on_Cadeirante_body_entered(body):
 	#Troca de Cena	
-	get_tree().change_scene("res://Scenes/Tasks/PCD-Home.tscn")	
+	get_tree().change_scene("res://Scenes/Dialogue/Cadeirante/PCD-Home.tscn")	
 
 
 func _on_magdalene_area_body_entered(body):
 	if body.name == "Player" :
-		get_tree().change_scene("res://Scenes/Tasks/igualdade_de_genero_task.tscn")
+		get_tree().change_scene("res://Scenes/Dialogue/Genero/Genero.tscn")
 	
 	pass # Replace with function body.

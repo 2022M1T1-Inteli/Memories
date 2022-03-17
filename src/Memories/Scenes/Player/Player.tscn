@@ -1,8 +1,8 @@
 [gd_scene load_steps=27 format=2]
 
-[ext_resource path="res://Scenes/Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Player/Player.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Player/Camera2D.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Player/Camera2D.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Player/Player.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=6]
 resource_name = "CorrerBaixo"
@@ -221,12 +221,12 @@ start_node = "Idle"
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 159, 94 )
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -1, -4 )
 scale = Vector2( 0.021692, 0.0214286 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 hframes = 8
 frame = 1
 
@@ -250,7 +250,7 @@ parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Run/blend_position = Vector2( 0, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource( 3 )
+script = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( 9.53674e-07, 3.025 )
