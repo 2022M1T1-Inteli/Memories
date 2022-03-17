@@ -1,0 +1,228 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Scenes/Tasks/Cadeirante/Task/WallNode.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Buttons/Exit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Tasks/Cadeirante/Task/memoria.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Tasks/Cadeirante/Task/Player.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Cadeirante/Fall/fall-000.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Memorie/Memorie_3.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Memorie/Memorie_9.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Memorie/Memorie_7.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Memorie/Memorie_2.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Memorie/Memorie_8.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Cadeirante/Idle/idle-000.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Cadeirante/City/sky.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Cadeirante/City/light.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Memorie/Memorie_4.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Memorie/Memorie_1.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Memorie/Memorie_6.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Cadeirante/Jump/jump-000.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Memorie/Memorie_5.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Memorie/Memorie_0.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/Tasks/Cadeirante/Task/Camera2D.gd" type="Script" id=23]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 88 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+draw_center = false
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 9.21954
+
+[node name="PCD-World2" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="scoreNow" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 153.0
+margin_top = 15.0
+margin_right = 193.0
+margin_bottom = 56.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerNode" type="Node2D" parent="."]
+pause_mode = 2
+position = Vector2( 0, 24 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Player" type="KinematicBody2D" parent="PlayerNode"]
+position = Vector2( 80, 97 )
+script = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerNode/Player"]
+position = Vector2( -36.5, -36 )
+polygon = PoolVector2Array( -6, -6, -6, -5, -13, -5, -13, -4, -14, -4, -14, -3, -11, -3, -11, 1, -14, 3, -14, 5, -15, 5, -15, 11, -14, 11, -14, 13, -10, 17, -4, 17, -3, 15, -2, 15, -2, 16, 0, 16, 0, 17, 4, 17, 5, 16, 6, 16, 6, 15, 7, 15, 7, 14, 10, 14, 10, 15, 11, 16, 14, 16, 15, 15, 15, 13, 13, 12, 12, 12, 12, 11, 9, 11, 9, 5, 8, 5, 8, 4, 8, 3, 7, 3, 7, 2, 5, 0, 5, -1, 4, -1, 4, -2, 1, -5, 1, -10, 2, -11, 2, -13, 1, -13, 1, -14, 0, -14, 0, -15, -5, -15, -5, -14, -6, -14, -6, -13, -7, -13, -7, -9, -6, -9 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="PlayerNode/Player"]
+position = Vector2( -36.5, -35 )
+frames = SubResource( 4 )
+animation = "jump"
+
+[node name="Detect" type="Area2D" parent="PlayerNode/Player"]
+position = Vector2( 38.5, 60 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="PlayerNode/Player/Detect"]
+position = Vector2( -75.5, -96 )
+polygon = PoolVector2Array( -6, -7, -6, -6, -12, -6, -13, -6, -14, -5, -14, -2, -11, -2, -11, 0, -14, 2, -14, 4, -15, 4, -15, 12, -14, 12, -14, 14, -11, 18, -4, 18, -3, 16, -2, 16, -2, 17, 0, 17, 0, 18, 4, 18, 5, 17, 6, 17, 6, 16, 7, 16, 7, 15, 10, 15, 10, 15, 11, 17, 14, 17, 15, 16, 15, 12, 14, 11, 12, 11, 12, 10, 9, 10, 9, 5, 9, 4, 8, 4, 8, 3, 8, 2, 7, 1, 5, 0, 5, -1, 5, -2, 4, -3, 1, -5, 2, -10, 2, -11, 2, -14, 1, -14, 1, -15, 0, -15, 0, -16, -5, -16, -5, -15, -6, -15, -6, -14, -7, -14, -7, -13, -7, -9, -6, -9 )
+
+[node name="Resetter" type="Area2D" parent="PlayerNode/Player"]
+position = Vector2( -310, 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Player/Resetter"]
+shape = SubResource( 3 )
+
+[node name="Light2D" type="Light2D" parent="PlayerNode/Player"]
+position = Vector2( -35.5, -35 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+shadow_enabled = true
+
+[node name="Intrucao" type="Label" parent="PlayerNode/Player"]
+margin_left = -119.0
+margin_top = -3.0
+margin_right = 56.0
+margin_bottom = 11.0
+text = "Precione espaço para jogar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WallNode" parent="." instance=ExtResource( 1 )]
+position = Vector2( 175, 96 )
+
+[node name="WallNode2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 255, 80 )
+
+[node name="WallNode3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 335, 97 )
+
+[node name="WallNode4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 415, 64 )
+
+[node name="WallNode5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 495, 72 )
+
+[node name="WallNode6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 575, 95 )
+
+[node name="WallNode7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 655, 114 )
+
+[node name="WallNode8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 735, 96 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 80, 96 )
+zoom = Vector2( 1.5, 1.5 )
+script = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BackGround" type="Sprite" parent="."]
+position = Vector2( -1.90735e-06, 71 )
+scale = Vector2( 200, 200 )
+z_index = -5
+texture = ExtResource( 15 )
+
+[node name="PCDexit" parent="." instance=ExtResource( 2 )]
+pause_mode = 2
+margin_left = -155.0
+margin_top = -35.0
+margin_right = -105.0
+margin_bottom = -15.0
+custom_styles/normal = SubResource( 1 )
+
+[node name="memoria" type="Area2D" parent="."]
+position = Vector2( 655, 114 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="memoria"]
+scale = Vector2( 0.033, 0.031 )
+frames = SubResource( 5 )
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="memoria"]
+shape = SubResource( 6 )
+
+[node name="memoria2" type="Area2D" parent="."]
+position = Vector2( 1210, 110 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="memoria2"]
+position = Vector2( 0.222656, -0.258057 )
+scale = Vector2( 0.033, 0.031 )
+frames = SubResource( 5 )
+frame = 7
+playing = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="memoria2"]
+position = Vector2( 0.223511, -0.258003 )
+shape = SubResource( 6 )
+
+[node name="memoria3" type="Area2D" parent="."]
+position = Vector2( 1767, 82 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="memoria3"]
+position = Vector2( 0.222656, 0.741943 )
+scale = Vector2( 0.033, 0.031 )
+frames = SubResource( 5 )
+frame = 5
+playing = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="memoria3"]
+position = Vector2( 0.224243, 0.742054 )
+shape = SubResource( 6 )
+
+[connection signal="area_entered" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_Detect_area_entered"]
+[connection signal="body_entered" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_Detect_body_entered"]
+[connection signal="body_entered" from="PlayerNode/Player/Resetter" to="PlayerNode/Player" method="_on_Resetter_body_entered"]
+[connection signal="pressed" from="PCDexit" to="PlayerNode/Player" method="_on_PCDexit_pressed"]
+[connection signal="body_entered" from="memoria" to="PlayerNode/Player" method="_on_memoria_body_entered"]
+[connection signal="body_entered" from="memoria2" to="PlayerNode/Player" method="_on_memoria2_body_entered"]
+[connection signal="body_entered" from="memoria3" to="PlayerNode/Player" method="_on_memoria3_body_entered"]
