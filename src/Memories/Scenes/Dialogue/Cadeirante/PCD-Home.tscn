@@ -4,17 +4,10 @@
 [ext_resource path="res://Scenes/Characters/Cadeirante/Cadeirante.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Buttons/Previous.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Buttons/Next.tscn" type="PackedScene" id=4]
-<<<<<<< HEAD:src/Memories/Scenes/Dialogue/Cadeirante/PCD-Home.tscn
 [ext_resource path="res://Scenes/Dialogue/Cadeirante/pergunta.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Dialogue/Cadeirante/PCD-Home.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Level/Cadeirante/City/City3.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Player/Player.png" type="Texture" id=8]
-=======
-[ext_resource path="res://Scenes/Tasks/Cadeirante/Home/PCD-Home.gd" type="Script" id=5]
-[ext_resource path="res://Assets/Player/Player.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Cadeirante/City/road.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Cadeirante/City/sky.png" type="Texture" id=8]
->>>>>>> 3b9eab2022529a52cbface13f085e35871f00c7e:src/Memories/Scenes/Dialogue/Cadeirante/Home/PCD-Home.tscn
 
 [sub_resource type="Animation" id=1]
 resource_name = "Idle"
@@ -50,20 +43,15 @@ tracks/0/keys = {
 
 [node name="PCD" type="Node2D"]
 position = Vector2( -6, -13 )
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 
-[node name="Sky" type="Sprite" parent="."]
-position = Vector2( 167, 104 )
-scale = Vector2( 0.166667, 0.166667 )
-texture = ExtResource( 8 )
-
-[node name="Road" type="Sprite" parent="."]
-position = Vector2( 167, 104 )
-scale = Vector2( 0.166667, 0.166667 )
+[node name="City3" type="Sprite" parent="."]
+position = Vector2( 174, 86 )
+scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 7 )
 
 [node name="Cabana" parent="." instance=ExtResource( 1 )]
-position = Vector2( 167, 148 )
+position = Vector2( 164, 142 )
 
 [node name="Cadeirante" parent="." instance=ExtResource( 2 )]
 position = Vector2( 170, 163 )
@@ -74,7 +62,7 @@ scale = Vector2( 0.0223414, 0.0216438 )
 
 [node name="Player" type="Sprite" parent="KinematicBody2D"]
 position = Vector2( 559.5, 1229.22 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 hframes = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
@@ -84,7 +72,6 @@ anims/Idle = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 
 [node name="Next" parent="." instance=ExtResource( 4 )]
-pause_mode = 2
 margin_left = 258.0
 margin_top = 99.0
 margin_right = 309.0
@@ -92,7 +79,6 @@ margin_bottom = 119.0
 script = null
 
 [node name="Previous" parent="." instance=ExtResource( 3 )]
-pause_mode = 2
 margin_left = 20.0
 margin_top = 98.0
 margin_right = 70.0
@@ -104,16 +90,9 @@ margin_left = 83.0
 margin_top = 43.0
 margin_right = 251.0
 margin_bottom = 96.0
-<<<<<<< HEAD:src/Memories/Scenes/Dialogue/Cadeirante/PCD-Home.tscn
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 script = ExtResource( 5 )
-=======
-custom_colors/default_color = Color( 1, 1, 1, 1 )
->>>>>>> 3b9eab2022529a52cbface13f085e35871f00c7e:src/Memories/Scenes/Dialogue/Cadeirante/Home/PCD-Home.tscn
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[connection signal="pressed" from="Next" to="." method="_on_Next_pressed"]
-[connection signal="pressed" from="Previous" to="." method="_on_Previous_pressed"]
