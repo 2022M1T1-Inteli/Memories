@@ -48,6 +48,7 @@ func _on_Homem_Negro_body_entered(body):
 # ao colidir com NPC do cadeirante no mapa chama a função
 func _on_Cadeirante_body_entered(body):
 	#Troca de Cena	
+	get_tree().change_scene("res://Scenes/Tasks/Cadeirante/Home/PCD-Home.tscn")	
 	get_tree().change_scene("res://Scenes/Tasks/PCD-Home.tscn")	
 
 

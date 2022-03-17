@@ -14,11 +14,11 @@ animations = [ {
 } ]
 
 [node name="Cadeirante" type="KinematicBody2D"]
+pause_mode = 2
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -4, 4.66667 )
 scale = Vector2( 0.733333, 0.733333 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 3
 playing = true

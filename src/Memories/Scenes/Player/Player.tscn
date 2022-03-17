@@ -220,6 +220,7 @@ start_node = "Idle"
 [sub_resource type="AnimationNodeStateMachinePlayback" id=18]
 
 [node name="Player" type="KinematicBody2D"]
+pause_mode = 2
 position = Vector2( 159, 94 )
 script = ExtResource( 1 )
 

@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Buttons/Start.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Buttons/Start-Selected.tres" type="StyleBox" id=2]
+[ext_resource path="res://Scenes/Buttons/Start.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Buttons/Start.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Cadeirante/City/sky.png" type="Texture" id=5]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="StyleBoxFlat" id=3]
+draw_center = false
+corner_detail = 1
+shadow_color = Color( 1, 1, 1, 0.6 )
+shadow_size = 2
+
+[node name="GameOverNode" type="Node2D"]
+visible = false
+position = Vector2( -80, 8 )
+
+[node name="CanvasLayerGO" type="CanvasLayer" parent="."]
+follow_viewport_enable = true
+
+[node name="finalScore" type="RichTextLabel" parent="CanvasLayerGO"]
+visible = false
+margin_left = 59.0
+margin_top = 48.0
+margin_right = 119.0
+margin_bottom = 80.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "12/21
+"
+}
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 200, 200 )
+texture = ExtResource( 5 )
+
+[node name="PCDstart" type="Button" parent="." instance=ExtResource( 1 )]
+margin_left = 134.0
+margin_top = 107.0
+margin_right = 185.0
+margin_bottom = 128.0
+theme = SubResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = true
+shortcut_in_tooltip = false
+icon = ExtResource( 4 )
+flat = true
+clip_text = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+reference_path = "res://Scenes/World/World.tscn"
+start_focused = true
