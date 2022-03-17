@@ -1,21 +1,23 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Scenes/Buttons/Start.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Buttons/Options.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Buttons/Exit.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/Music and Sounds/Music.mp3" type="AudioStream" id=6]
-[ext_resource path="res://Scenes/Home/Sky.gd" type="Script" id=8]
-[ext_resource path="res://Assets/Home/Foreground.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Home/BG_Decor.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Home/Sky.png" type="Texture" id=11]
-[ext_resource path="res://Assets/Home/Ground.png" type="Texture" id=12]
-[ext_resource path="res://Scenes/Home/MiddleDecor.gd" type="Script" id=13]
-[ext_resource path="res://Assets/Home/Middle_Decor.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Buttons/Start.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Buttons/Options.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Buttons/Exit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Logo/Logo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Home/MiddleDecor.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Home/Sky.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Music and Sounds/Music.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Home/Ground.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Home/Sky.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Home/Foreground.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Home/Middle_Decor.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Home/BG_Decor.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Logo/logo-amdev.png" type="Texture" id=13]
 
 [node name="Home" type="Node2D"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
+stream = ExtResource( 7 )
 autoplay = true
 
 [node name="Background" type="YSort" parent="."]
@@ -23,40 +25,40 @@ autoplay = true
 [node name="Sky" type="Sprite" parent="Background"]
 position = Vector2( 194, 90.5 )
 scale = Vector2( 0.205208, 0.167593 )
-texture = ExtResource( 11 )
-script = ExtResource( 8 )
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
 
 [node name="BgDecor" type="Sprite" parent="Background/Sky"]
 position = Vector2( 4.87292, 8.95038 )
 scale = Vector2( 1, 1.00552 )
-texture = ExtResource( 10 )
+texture = ExtResource( 12 )
 
 [node name="MiddleDecor" type="Sprite" parent="Background"]
 position = Vector2( 194.5, 90.5 )
 scale = Vector2( 0.204687, 0.169444 )
-texture = ExtResource( 14 )
-script = ExtResource( 13 )
+texture = ExtResource( 11 )
+script = ExtResource( 5 )
 
 [node name="Foreground" type="Sprite" parent="Background"]
 position = Vector2( 160.5, 90.75 )
 scale = Vector2( 0.167188, 0.168981 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="Ground" type="Sprite" parent="Background"]
 position = Vector2( 160, 90 )
 scale = Vector2( 0.167188, 0.168981 )
-texture = ExtResource( 12 )
+texture = ExtResource( 8 )
 
 [node name="Buttons" type="YSort" parent="."]
 
-[node name="Start" parent="Buttons" instance=ExtResource( 3 )]
+[node name="Start" parent="Buttons" instance=ExtResource( 1 )]
 light_mask = 131
 margin_left = 135.0
 margin_top = 80.0
 margin_right = 186.0
 margin_bottom = 101.0
 
-[node name="Options" parent="Buttons" instance=ExtResource( 4 )]
+[node name="Options" parent="Buttons" instance=ExtResource( 2 )]
 margin_left = 135.0
 margin_top = 110.0
 margin_right = 185.0
@@ -64,9 +66,16 @@ margin_bottom = 130.0
 focus_neighbour_bottom = NodePath("../Exit")
 reference_path = "res://Scenes/Options/Options.tscn"
 
-[node name="Exit" parent="Buttons" instance=ExtResource( 5 )]
+[node name="Exit" parent="Buttons" instance=ExtResource( 3 )]
 margin_left = 135.0
 margin_top = 140.0
 margin_right = 185.0
 margin_bottom = 160.0
 focus_neighbour_top = NodePath("../Options")
+
+[node name="Logo-amdev" type="Sprite" parent="."]
+position = Vector2( 34.1875, 166.75 )
+scale = Vector2( 0.230809, 0.195 )
+texture = ExtResource( 13 )
+
+[node name="Logo" parent="." instance=ExtResource( 4 )]
