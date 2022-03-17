@@ -66,12 +66,8 @@ func _on_Detect_area_entered(area):
 
 func _on_Detect_body_entered(body):
 	if body.name == "Walls":
-		get_parent().get_parent().get_parent().get_node("GameOverNode/CanvasLayerGO/finalScore").text = str(score, " / 21")		
-		get_parent().get_parent().hide()
-		canvasLayer.hide()
-		GameOverNode.show()
-		canvasLayerGO.show()
-
+		get_tree().reload_current_scene()
+		
 
 func _on_PCDexit_pressed():
 	get_tree().change_scene("res://Scenes/Tasks/Cadeirante/Home/PCD-Home.tscn")
@@ -82,8 +78,6 @@ func _on_PCDexit_pressed():
 func _on_PCDstart_pressed():
 	get_tree().reload_current_scene()
 	
-#	get_parent().get_parent().show()
-#	GameOverNode.hide()
 	
 
 func _on_memoria_body_entered(body):

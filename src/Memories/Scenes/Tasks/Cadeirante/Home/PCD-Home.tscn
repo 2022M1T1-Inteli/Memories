@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Buildings/Casa-de-palha.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/NPCs/Cadeirante.tscn" type="PackedScene" id=2]
@@ -6,7 +6,8 @@
 [ext_resource path="res://Scenes/Buttons/Next.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Tasks/Cadeirante/Home/PCD-Home.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Player/Player.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Cadeirante/City/City.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Cadeirante/City/road.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Cadeirante/City/sky.png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Idle"
@@ -44,13 +45,18 @@ tracks/0/keys = {
 position = Vector2( -6, -13 )
 script = ExtResource( 5 )
 
-[node name="City3" type="Sprite" parent="."]
-position = Vector2( 174, 86 )
-scale = Vector2( 0.2, 0.2 )
+[node name="Sky" type="Sprite" parent="."]
+position = Vector2( 167, 104 )
+scale = Vector2( 0.166667, 0.166667 )
+texture = ExtResource( 8 )
+
+[node name="Road" type="Sprite" parent="."]
+position = Vector2( 167, 104 )
+scale = Vector2( 0.166667, 0.166667 )
 texture = ExtResource( 7 )
 
 [node name="Cabana" parent="." instance=ExtResource( 1 )]
-position = Vector2( 164, 142 )
+position = Vector2( 167, 148 )
 
 [node name="Cadeirante" parent="." instance=ExtResource( 2 )]
 position = Vector2( 170, 163 )
@@ -91,8 +97,7 @@ margin_left = 83.0
 margin_top = 43.0
 margin_right = 251.0
 margin_bottom = 96.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
