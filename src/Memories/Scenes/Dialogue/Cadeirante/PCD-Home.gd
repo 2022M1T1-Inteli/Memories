@@ -2,7 +2,7 @@ extends Node2D
 
 var pagina=0
 #texto da pergunta
-var texto=["Fala pra noix, amigão","Vou te contar uma história de cadeirante","Senta que la vem história...", "Aceita a missão?"]
+var texto=["Stephen Hawking: Olá! Tenho a impressão de que já nos conhecemos, mas por precaução...", "Muito prazer! Me chamo Stephen Hawking, mas pode me chamar de Steph!","Quero te contar mais sobre a minha história, tem interesse?","Mas para isso preciso que você passe por um desafio."]
 var controle = texto.size() - 1
 
 func _ready():

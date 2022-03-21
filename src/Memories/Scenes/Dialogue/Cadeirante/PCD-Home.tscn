@@ -92,13 +92,10 @@ margin_bottom = 118.0
 script = null
 
 [node name="pergunta" type="RichTextLabel" parent="."]
-margin_left = 83.0
-margin_top = 43.0
-margin_right = 251.0
+margin_left = 22.0
+margin_top = 45.0
+margin_right = 318.0
 margin_bottom = 96.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_colors/default_color = Color( 0.980392, 0.980392, 0.980392, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
