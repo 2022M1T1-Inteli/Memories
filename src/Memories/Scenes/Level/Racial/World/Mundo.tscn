@@ -1,0 +1,233 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Scenes/Level/Racial/Memories/Memoria2.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Level/Racial/Memories/Memoria1.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Level/Racial/Memories/Memoria3.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Level/Racial/Reload/Area2D.gd" type="Script" id=4]
+[ext_resource path="res://Assets/World/Cenário Racial Escuro.png" type="Texture" id=5]
+[ext_resource path="res://Assets/World/pixil-frame-0 (82).png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Characters/Racial/Jogador.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Characters/Racial/HomemBranco.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/World/jigsaw-puzzle-303250_1280.png" type="Texture" id=9]
+[ext_resource path="res://Assets/World/Arvores Racial.png" type="Texture" id=10]
+[ext_resource path="res://Assets/World/200px-Chartreuse_verde-limão.jpg" type="Texture" id=11]
+[ext_resource path="res://Scenes/Level/Racial/World/Barra Progresso.gd" type="Script" id=12]
+[ext_resource path="res://Assets/World/1554086.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Level/Racial/World/Chegada.gd" type="Script" id=14]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 41.5, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2042.5, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 6.96875, 8.34375 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 6.75, 8 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 6.75, 8.25 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 72, 7 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 24, 7 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 8, 24 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 22, 6.5 )
+
+[sub_resource type="TileSet" id=10]
+0/name = "chão grande"
+0/texture = ExtResource( 5 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 448, 336, 144, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 72, 8 )
+0/navigation_offset = Vector2( 72, 8 )
+0/shape_offset = Vector2( 72, 9 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 72, 9 )
+0/shape = SubResource( 6 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 72, 9 )
+} ]
+0/z_index = 0
+1/name = "chao menor"
+1/texture = ExtResource( 5 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 400, 336, 48, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 24, 8 )
+1/navigation_offset = Vector2( 24, 8 )
+1/shape_offset = Vector2( 24, 9 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 24, 9 )
+1/shape = SubResource( 7 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 24, 9 )
+} ]
+1/z_index = 0
+2/name = "parede"
+2/texture = ExtResource( 10 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 74, 96, 16, 48 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 8, 24 )
+2/navigation_offset = Vector2( 8, 24 )
+2/shape_offset = Vector2( 8, 24 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 8, 24 )
+2/shape = SubResource( 8 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 24 )
+} ]
+2/z_index = 0
+3/name = "espinhos"
+3/texture = ExtResource( 5 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 352, 336, 48, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 24, 8 )
+3/navigation_offset = Vector2( 24, 8 )
+3/shape_offset = Vector2( 24, 9.5 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 24, 9.5 )
+3/shape = SubResource( 9 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 24, 9.5 )
+} ]
+3/z_index = 0
+
+[node name="Mundo" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Jogador" parent="." instance=ExtResource( 7 )]
+position = Vector2( -88, -66 )
+
+[node name="Camera2D" type="Camera2D" parent="Jogador"]
+position = Vector2( 181, 171 )
+current = true
+zoom = Vector2( 2.3, 2.5 )
+
+[node name="HomemBranco" parent="." instance=ExtResource( 8 )]
+position = Vector2( 40, -24 )
+
+[node name="Reload" type="Area2D" parent="."]
+position = Vector2( 957, 137 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Reload"]
+position = Vector2( 2, 13 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Reload"]
+position = Vector2( 796, 173 )
+shape = SubResource( 2 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+position = Vector2( 2566.99, 212 )
+scale = Vector2( 15.5796, 3.54667 )
+z_index = -117
+texture = ExtResource( 6 )
+
+[node name="Memoria1" type="Area2D" parent="."]
+position = Vector2( 56, 0 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Memoria1"]
+position = Vector2( 1824, 216 )
+shape = SubResource( 3 )
+
+[node name="Jigsaw-puzzle-3032501280" type="Sprite" parent="Memoria1"]
+position = Vector2( 1824, 216 )
+scale = Vector2( 0.0127951, 0.0127951 )
+texture = ExtResource( 9 )
+
+[node name="Memoria2" type="Area2D" parent="."]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Memoria2"]
+position = Vector2( 2656.75, 96.1889 )
+shape = SubResource( 4 )
+
+[node name="Jigsaw-puzzle-3032501283" type="Sprite" parent="Memoria2"]
+position = Vector2( 2656.5, 96.1889 )
+scale = Vector2( 0.0127951, 0.0127951 )
+texture = ExtResource( 9 )
+
+[node name="Memoria3" type="Area2D" parent="."]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Memoria3"]
+position = Vector2( 3721.75, 130.439 )
+shape = SubResource( 5 )
+
+[node name="Jigsaw-puzzle-3032501284" type="Sprite" parent="Memoria3"]
+position = Vector2( 3721.5, 130.189 )
+scale = Vector2( 0.0127951, 0.0127951 )
+texture = ExtResource( 9 )
+
+[node name="TileMap3" type="TileMap" parent="."]
+tile_set = SubResource( 10 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -131100, 2, 0, -196371, 2, 0, -65563, 0, 0, -65554, 0, 0, -65545, 0, 0, -131072, 0, 0, -131063, 0, 0, -131054, 0, 0, -131045, 0, 0, -131036, 0, 0, -131027, 0, 0, -131018, 0, 0, -131009, 0, 0, -131000, 0, 0, -130991, 0, 0, -130982, 0, 0, -130973, 0, 0, -130964, 0, 0, -130955, 0, 0, -130946, 0, 0, -130937, 0, 0, -130928, 0, 0, -130919, 0, 0, -130910, 0, 0, -130901, 0, 0, -130892, 0, 0, -130883, 0, 0, -130874, 0, 0, -130865, 0, 0, -130856, 0, 0, -130847, 0, 0, -130838, 1, 0, -65345, 2, 0, 65508, 2, 0, 237, 2, 0, 65727, 2, 0, 262116, 2, 0, 196845, 2, 0, 262192, -1610612734, 0, 458724, 2, 0, 393259, -1610612734, 0, 393453, 2, 0, 458914, 2, 0, 458915, -1610612734, 0, 458918, -1610612734, 0, 458921, 2, 0, 458943, 2, 0, 524326, -1610612734, 0, 524342, 2, 0, 524343, 2, 0, 524344, 2, 0, 524350, 2, 0, 524351, 2, 0, 655332, 2, 0, 589881, 3, 0, 589883, 3, 0, 589984, 0, 0, 589993, 1, 0, 590000, -1610612734, 0, 590002, -1610612734, 0, 590009, -1610612734, 0, 590019, -1610612734, 0, 590039, -1610612734, 0, 590043, 0, 0, 590052, 0, 0, 590061, 2, 0, 720869, 0, 0, 720878, 0, 0, 720887, 0, 0, 655360, 0, 0, 655369, 0, 0, 655378, 0, 0, 655387, 0, 0, 655413, 0, 0, 655422, 0, 0, 655568, -1610612734, 0, 720970, -1610612734, 0, 721050, -1610612734, 0, 721097, -1610612734, 0, 851940, 2, 0, 786669, 2, 0, 852047, -1610612734, 0, 852116, -1610612734, 0, 917608, -1610612734, 0, 917614, 0, 0, 917620, 0, 0, 917633, -1610612734, 0, 1048548, 2, 0, 983124, -1610612734, 0, 983131, -1610612734, 0, 983138, -1610612734, 0, 983182, -1610612734, 0, 983277, 2, 0, 1048712, -1610612734, 0, 1245156, 2, 0, 1179885, 2, 0, 1376493, 2, 0, 2424821, 1, 0 )
+
+[node name="Barra Progresso" type="KinematicBody2D" parent="."]
+script = ExtResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="Barra Progresso"]
+position = Vector2( -4624, 296 )
+scale = Vector2( 44.07, 0.0582822 )
+texture = ExtResource( 11 )
+
+[node name="Chegada" type="KinematicBody2D" parent="."]
+script = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="Chegada"]
+position = Vector2( 368, 288 )
+scale = Vector2( 0.0625, 0.0625 )
+texture = ExtResource( 13 )
