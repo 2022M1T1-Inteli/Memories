@@ -11,4 +11,4 @@ func entrou(event):
 		queue_free()
 		
 #		abrir cena do diálogo quando a terceira memória for coletada
-#		get_tree().
+		get_tree().change_scene("res://Scenes/World/World.tscn")	

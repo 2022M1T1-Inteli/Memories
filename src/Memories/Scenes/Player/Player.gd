@@ -43,7 +43,7 @@ func _physics_process(delta):
 # ao colidir com NPC do homem negro no mapa chama a função
 func _on_Homem_Negro_body_entered(body):
 	#Troca de Cena
-	get_tree().change_scene("res://Scenes/Dialogue/Racismo.tscn")
+	get_tree().change_scene("res://Scenes/Level/Racial/World/Mundo.tscn")
 	
 # ao colidir com NPC do cadeirante no mapa chama a função
 func _on_Cadeirante_body_entered(body):
