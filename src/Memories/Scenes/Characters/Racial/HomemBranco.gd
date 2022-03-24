@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+#declaração das variáveis
 var iniciou = false
 var SPEED = 145
 var velocidade = Vector2()

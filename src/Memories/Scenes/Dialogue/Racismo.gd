@@ -33,7 +33,7 @@ func vira_pagina():
 		$pergunta.set_bbcode(texto[pagina])
 		$Previous.text=  respostas[controle][0]
 		$Next.text= respostas[controle][1]
-	# muda as perguntas e respostas
+# muda as perguntas e respostas
 	
 func volta_pagina():
 	if pagina != 0:
@@ -41,3 +41,4 @@ func volta_pagina():
 		$pergunta.set_bbcode(texto[pagina])
 		$Previous.text=  respostas[controle][0]
 		$Next.text= respostas[controle][1]
+# muda para frase anterior

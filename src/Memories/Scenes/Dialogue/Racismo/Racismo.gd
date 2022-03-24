@@ -21,6 +21,7 @@ func _ready():
 	
 	#texto dos butões
 
+#muda o para o próximo dialogo
 func vira_pagina():
 	print (pagina)
 	print (controle)
@@ -33,8 +34,8 @@ func vira_pagina():
 		$pergunta.set_bbcode(texto[pagina])
 		$Previous.text=  respostas[controle][0]
 		$Next.text= respostas[controle][1]
-	# muda as perguntas e respostas
-	
+
+#muda o para o último dialogo
 func volta_pagina():
 	if pagina != 0:
 		pagina -=1
