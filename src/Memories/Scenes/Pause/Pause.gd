@@ -28,6 +28,7 @@ func _on_Back_mouse_entered():
 func _on_Home_pressed():
 	audioClick.play()
 	yield(audioClick, "finished")
+	get_tree().paused = false
 	get_tree().change_scene("res://Scenes/Home/Home.tscn")
 	
 	

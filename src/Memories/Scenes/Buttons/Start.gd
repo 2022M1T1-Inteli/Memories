@@ -31,8 +31,8 @@ func _on_Button_mouse_entered():
 
 #quando apertar o butão
 func _on_Button_Pressed():
-	# função ao passar o click
 	
+	# função ao passar o click
 	#verifica se o caminho da cena não esta vazio
 	if(reference_path != ""):
 		
@@ -56,3 +56,5 @@ func _on_Button_Pressed():
 		
 		#troca a cena		
 		get_tree().quit()
+
+		
