@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scenes/Level/Racial/Memories/Memoria2.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Level/Racial/Memories/Memoria1.gd" type="Script" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Scenes/Level/Racial/World/Barra Progresso.gd" type="Script" id=12]
 [ext_resource path="res://Assets/World/1554086.png" type="Texture" id=13]
 [ext_resource path="res://Scenes/Level/Racial/World/Chegada.gd" type="Script" id=14]
+[ext_resource path="res://Scenes/Level/Racial/World/Chegada Branco.gd" type="Script" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 41.5, 10 )
@@ -128,6 +129,8 @@ extents = Vector2( 22, 6.5 )
 } ]
 3/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=11]
+
 [node name="Mundo" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
@@ -231,3 +234,13 @@ script = ExtResource( 14 )
 position = Vector2( 368, 288 )
 scale = Vector2( 0.0625, 0.0625 )
 texture = ExtResource( 13 )
+
+[node name="Chegada Branco" type="Area2D" parent="."]
+position = Vector2( 3784, -40 )
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chegada Branco"]
+shape = SubResource( 11 )
