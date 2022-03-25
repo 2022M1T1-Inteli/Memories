@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=2]
+[gd_scene load_steps=99 format=2]
 
 [ext_resource path="res://Assets/World/CliffTileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/World/GrassBackground.png" type="Texture" id=2]
@@ -45,6 +45,7 @@
 [ext_resource path="res://Scenes/Characters/Genero/Genero.tscn" type="PackedScene" id=43]
 [ext_resource path="res://Scenes/Pause/Pause_Button.tscn" type="PackedScene" id=44]
 [ext_resource path="res://Scenes/Pause/Pause_Layer.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Scenes/Dialogue/Enter_Layer.tscn" type="PackedScene" id=46]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -521,7 +522,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=53]
-extents = Vector2( 10, 4.5 )
+extents = Vector2( 18, 6 )
 
 [sub_resource type="RectangleShape2D" id=52]
 extents = Vector2( 8, 14.5 )
@@ -721,8 +722,12 @@ position = Vector2( -34, 121 )
 [node name="Cadeirante" parent="Direita-1/Cadeirante" instance=ExtResource( 14 )]
 position = Vector2( 492, -217 )
 
+[node name="Sprite" parent="Direita-1/Cadeirante/Cadeirante" instance=ExtResource( 46 )]
+position = Vector2( -7, -17 )
+scale = Vector2( 0.5, 0.5 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direita-1/Cadeirante"]
-position = Vector2( 488, -205.5 )
+position = Vector2( 490, -204 )
 shape = SubResource( 53 )
 
 [node name="Direita-2" type="YSort" parent="."]
@@ -1269,6 +1274,10 @@ scale = Vector2( 0.822917, 0.822917 )
 texture = ExtResource( 13 )
 hframes = 10
 
+[node name="Sprite" parent="Centro-Meio/Homem_Negro/Sprite" instance=ExtResource( 46 )]
+position = Vector2( 0, -26.7342 )
+scale = Vector2( 0.5, 0.5 )
+
 [node name="Poste" parent="Centro-Meio" instance=ExtResource( 22 )]
 position = Vector2( 7, -1 )
 
@@ -1807,12 +1816,10 @@ position = Vector2( 337, 261 )
 [node name="Tree" parent="Baixo-Direita-1" instance=ExtResource( 5 )]
 position = Vector2( 148, 311 )
 
-[node name="Player" type="YSort" parent="."]
-
-[node name="Player" parent="Player" instance=ExtResource( 6 )]
+[node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( 147, 89 )
 
-[node name="Pause_Button" parent="Player/Player" instance=ExtResource( 44 )]
+[node name="Pause_Button" parent="Player" instance=ExtResource( 44 )]
 margin_left = -156.0
 margin_top = -86.0
 margin_right = -134.0
@@ -1820,6 +1827,8 @@ margin_bottom = -67.0
 
 [node name="Pause_Layer" parent="." instance=ExtResource( 45 )]
 
-[connection signal="body_entered" from="Direita-1/Cadeirante" to="Player/Player" method="_on_Cadeirante_body_entered"]
-[connection signal="body_entered" from="Centro-Meio/Homem_Negro" to="Player/Player" method="_on_Homem_Negro_body_entered"]
-[connection signal="body_entered" from="Centro-Meio-Direita-2/magdalene_area" to="Player/Player" method="_on_magdalene_area_body_entered"]
+[connection signal="body_entered" from="Direita-1/Cadeirante" to="Player" method="_on_Cadeirante_body_entered"]
+[connection signal="body_exited" from="Direita-1/Cadeirante" to="Player" method="_on_Cadeirante_body_exited"]
+[connection signal="body_entered" from="Centro-Meio/Homem_Negro" to="Player" method="_on_Homem_Negro_body_entered"]
+[connection signal="body_exited" from="Centro-Meio/Homem_Negro" to="Player" method="_on_Homem_Negro_body_exited"]
+[connection signal="body_entered" from="Centro-Meio-Direita-2/magdalene_area" to="Player" method="_on_magdalene_area_body_entered"]

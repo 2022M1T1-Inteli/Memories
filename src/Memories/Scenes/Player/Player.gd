@@ -12,11 +12,11 @@ onready var animacaoTree = $AnimationTree
 #variavel que pega as animações e devolver pra sser executada
 onready var animacaoState = animacaoTree.get("parameters/playback")
 
-
+signal cadeiranteFase
+signal homemNegro
 
 func _physics_process(delta): 
 	isInside = false;
-	
 	#declaração e inicial do vetor
 	var input_vector = Vector2.ZERO
 	
@@ -51,19 +51,20 @@ func _physics_process(delta):
 
 # ao colidir com NPC do homem negro no mapa chama a função
 func _on_Homem_Negro_body_entered(body):
-	
 	#Troca de Cena
-	get_tree().change_scene("res://Scenes/Level/Racial/World/Mundo.tscn")
+	emit_signal("homemNegro")
 	
+func _on_Homem_Negro_body_exited(body):
+	emit_signal("homemNegro")	
 # ao colidir com NPC do cadeirante no mapa chama a função
-func _on_Cadeirante_body_entered(body):
-	
+func _on_Cadeirante_body_entered(body):	
 	#Troca de Cena	
-	get_tree().change_scene("res://Scenes/Dialogue/Cadeirante/PCD-Home.tscn")	
+	emit_signal("cadeiranteFase")	
 
 #Ao colidir com Magdalene muda de cena
+func _on_Cadeirante_body_exited(body):
+	emit_signal("cadeiranteFase")	
+
 func _on_magdalene_area_body_entered(body):
-	
 #Troca de cena
 	get_tree().change_scene("res://Scenes/Level/Genero/Principal/Principal.tscn")
-

@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Dialog box/Plate.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Dialog box/Plate.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Dialog box/Dialog_box.gd" type="Script" id=3]
+
+[node name="Dialog_box" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="Plate" type="NinePatchRect" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -161.5
+margin_top = -91.0
+margin_right = 161.5
+margin_bottom = 6.0
+texture = ExtResource( 1 )
+patch_margin_left = 138
+patch_margin_top = 57
+patch_margin_right = 123
+patch_margin_bottom = 40
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+dialogPath = "res://Json/Dialogs.json"
+
+[node name="Name" type="RichTextLabel" parent="Plate"]
+margin_left = 49.5
+margin_top = 32.0
+margin_right = 126.5
+margin_bottom = 47.0
+text = "Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="Plate"]
+margin_left = 57.5
+margin_top = 47.0
+margin_right = 265.5
+margin_bottom = 71.0
+text = "Message"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Plate"]
