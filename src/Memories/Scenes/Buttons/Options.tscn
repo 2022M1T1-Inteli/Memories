@@ -27,9 +27,6 @@ icon = ExtResource( 1 )
 flat = true
 clip_text = true
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )

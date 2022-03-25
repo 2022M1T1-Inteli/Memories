@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scenes/Level/Racial/Memories/Memoria2.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Level/Racial/Memories/Memoria1.gd" type="Script" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Assets/World/1554086.png" type="Texture" id=13]
 [ext_resource path="res://Scenes/Level/Racial/World/Chegada.gd" type="Script" id=14]
 [ext_resource path="res://Scenes/Level/Racial/World/Chegada Branco.gd" type="Script" id=15]
+[ext_resource path="res://Assets/Buttons/Exit.png" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 41.5, 10 )
@@ -144,6 +145,14 @@ position = Vector2( 181, 171 )
 current = true
 zoom = Vector2( 2.3, 2.5 )
 
+[node name="Button" type="Button" parent="Jogador"]
+margin_left = 488.0
+margin_top = -54.0
+margin_right = 550.0
+margin_bottom = -28.0
+icon = ExtResource( 16 )
+flat = true
+
 [node name="HomemBranco" parent="." instance=ExtResource( 8 )]
 position = Vector2( 40, -24 )
 
@@ -220,6 +229,7 @@ format = 1
 tile_data = PoolIntArray( -131100, 2, 0, -196371, 2, 0, -65563, 0, 0, -65554, 0, 0, -65545, 0, 0, -131072, 0, 0, -131063, 0, 0, -131054, 0, 0, -131045, 0, 0, -131036, 0, 0, -131027, 0, 0, -131018, 0, 0, -131009, 0, 0, -131000, 0, 0, -130991, 0, 0, -130982, 0, 0, -130973, 0, 0, -130964, 0, 0, -130955, 0, 0, -130946, 0, 0, -130937, 0, 0, -130928, 0, 0, -130919, 0, 0, -130910, 0, 0, -130901, 0, 0, -130892, 0, 0, -130883, 0, 0, -130874, 0, 0, -130865, 0, 0, -130856, 0, 0, -130847, 0, 0, -130838, 1, 0, -65345, 2, 0, 65508, 2, 0, 237, 2, 0, 65727, 2, 0, 262116, 2, 0, 196845, 2, 0, 262192, -1610612734, 0, 458724, 2, 0, 393259, -1610612734, 0, 393453, 2, 0, 458914, 2, 0, 458915, -1610612734, 0, 458918, -1610612734, 0, 458921, 2, 0, 458943, 2, 0, 524326, -1610612734, 0, 524342, 2, 0, 524343, 2, 0, 524344, 2, 0, 524350, 2, 0, 524351, 2, 0, 655332, 2, 0, 589881, 3, 0, 589883, 3, 0, 589984, 0, 0, 589993, 1, 0, 590000, -1610612734, 0, 590002, -1610612734, 0, 590009, -1610612734, 0, 590019, -1610612734, 0, 590039, -1610612734, 0, 590043, 0, 0, 590052, 0, 0, 590061, 2, 0, 720869, 0, 0, 720878, 0, 0, 720887, 0, 0, 655360, 0, 0, 655369, 0, 0, 655378, 0, 0, 655387, 0, 0, 655413, 0, 0, 655422, 0, 0, 655568, -1610612734, 0, 720970, -1610612734, 0, 721050, -1610612734, 0, 721097, -1610612734, 0, 851940, 2, 0, 786669, 2, 0, 852047, -1610612734, 0, 852116, -1610612734, 0, 917608, -1610612734, 0, 917614, 0, 0, 917620, 0, 0, 917633, -1610612734, 0, 1048548, 2, 0, 983124, -1610612734, 0, 983131, -1610612734, 0, 983138, -1610612734, 0, 983182, -1610612734, 0, 983277, 2, 0, 1048712, -1610612734, 0, 1245156, 2, 0, 1179885, 2, 0, 1376493, 2, 0, 2424821, 1, 0 )
 
 [node name="Barra Progresso" type="KinematicBody2D" parent="."]
+visible = false
 script = ExtResource( 12 )
 
 [node name="Sprite" type="Sprite" parent="Barra Progresso"]
@@ -228,6 +238,7 @@ scale = Vector2( 44.07, 0.0582822 )
 texture = ExtResource( 11 )
 
 [node name="Chegada" type="KinematicBody2D" parent="."]
+visible = false
 script = ExtResource( 14 )
 
 [node name="Sprite" type="Sprite" parent="Chegada"]
@@ -244,3 +255,5 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chegada Branco"]
 shape = SubResource( 11 )
+
+[connection signal="pressed" from="Jogador/Button" to="Reload" method="_on_Button_pressed"]
