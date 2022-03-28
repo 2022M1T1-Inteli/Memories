@@ -2,6 +2,5 @@ extends CanvasLayer
 
 
 func _ready():
-	Dialogic.start("")
-	var dialogo = Dialogic.start("Stephen Hawking")
+	var dialogo = Dialogic.start("Cadeirante") 
 	add_child(dialogo)

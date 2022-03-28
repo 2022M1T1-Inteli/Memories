@@ -1,0 +1,31 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1648219019.cfg"
+		},
+		{
+			"character": "character-1648219051.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Olá! Tenho a impressão de que já nos conhecemos, mas por precaução..."
+		},
+		{
+			"character": "character-1648219051.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Muito prazer! Me chamo Stephen Hawking, mas pode me chamar de Steph!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Quero te contar mais sobre a minha história, tem interesse? "
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1648219041.json",
+		"name": "Cadeirante"
+	}
+}
