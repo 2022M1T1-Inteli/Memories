@@ -10,3 +10,8 @@ script = ExtResource( 2 )
 position = Vector2( 160.5, 89.625 )
 scale = Vector2( 0.250706, 0.271628 )
 texture = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
