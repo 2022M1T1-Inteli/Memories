@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scenes/Level/Racial/Memories/Memoria2.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Level/Racial/Memories/Memoria1.gd" type="Script" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Scenes/Level/Racial/World/Chegada.gd" type="Script" id=14]
 [ext_resource path="res://Scenes/Level/Racial/World/Chegada Branco.gd" type="Script" id=15]
 [ext_resource path="res://Assets/Buttons/Exit.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/Level/Racial/Memories/memoria.tscn" type="PackedScene" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 41.5, 10 )
@@ -177,11 +178,9 @@ z_index = -117
 texture = ExtResource( 6 )
 
 [node name="Memoria1" type="Area2D" parent="."]
+visible = false
 position = Vector2( 56, 0 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memoria1"]
 position = Vector2( 1824, 216 )
@@ -193,6 +192,7 @@ scale = Vector2( 0.0127951, 0.0127951 )
 texture = ExtResource( 9 )
 
 [node name="Memoria2" type="Area2D" parent="."]
+visible = false
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -208,6 +208,7 @@ scale = Vector2( 0.0127951, 0.0127951 )
 texture = ExtResource( 9 )
 
 [node name="Memoria3" type="Area2D" parent="."]
+visible = false
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
@@ -255,5 +256,15 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chegada Branco"]
 shape = SubResource( 11 )
+
+[node name="memoria" parent="." instance=ExtResource( 17 )]
+position = Vector2( 1872, 208 )
+
+[node name="memoria2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 2656, 96 )
+
+[node name="memoria3" parent="." instance=ExtResource( 17 )]
+position = Vector2( 3720, 128 )
+script = ExtResource( 3 )
 
 [connection signal="pressed" from="Jogador/Button" to="Reload" method="_on_Button_pressed"]
