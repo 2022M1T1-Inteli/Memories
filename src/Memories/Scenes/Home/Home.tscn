@@ -74,8 +74,8 @@ margin_bottom = 160.0
 focus_neighbour_top = NodePath("../Options")
 
 [node name="Logo-amdev" type="Sprite" parent="."]
-position = Vector2( 34.1875, 166.75 )
-scale = Vector2( 0.230809, 0.195 )
+position = Vector2( 32.1875, 166.75 )
+scale = Vector2( 0.214212, 0.195 )
 texture = ExtResource( 13 )
 
 [node name="Logo" parent="." instance=ExtResource( 4 )]
