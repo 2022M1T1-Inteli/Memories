@@ -181,7 +181,7 @@ __meta__ = {
 position = Vector2( 0.222656, -0.258057 )
 scale = Vector2( 0.033, 0.031 )
 frames = SubResource( 5 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="memoria2"]
@@ -200,7 +200,6 @@ __meta__ = {
 position = Vector2( 0.222656, 0.741943 )
 scale = Vector2( 0.033, 0.031 )
 frames = SubResource( 5 )
-frame = 2
 playing = true
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="memoria3"]
@@ -211,5 +210,6 @@ shape = SubResource( 6 )
 [connection signal="body_entered" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_Detect_body_entered"]
 [connection signal="body_entered" from="PlayerNode/Player/Resetter" to="PlayerNode/Player" method="_on_Resetter_body_entered"]
 [connection signal="pressed" from="PCDexit" to="PlayerNode/Player" method="_on_PCDexit_pressed"]
+[connection signal="body_entered" from="memoria" to="PlayerNode/Player" method="_on_memoria_body_entered"]
 [connection signal="body_entered" from="memoria2" to="PlayerNode/Player" method="_on_memoria2_body_entered"]
 [connection signal="body_entered" from="memoria3" to="PlayerNode/Player" method="_on_memoria3_body_entered"]
