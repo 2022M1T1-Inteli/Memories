@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 onready var camera = $Camera2D
 onready var timer = $Timer
+onready var Global = get_node("/root/VariaveisGlobais")
 
 var movement = Vector2(0,0)
 var speed = 100
@@ -40,7 +41,7 @@ func gravidade():
 
 # faz o wall kikc
 func wall_kick():
-	if $RayCastd.is_colliding() and Input.is_action_just_pressed("ui_select") and not onGround:
+	if $RayCastd.is_colliding() and Input.is_action_just_pressed("ui_up") and not onGround:
 		movement.x = -speed*2
 		movement.y = -jumpForce*0.8
 		$AnimatedSprite.set_flip_h(true) 
@@ -49,12 +50,12 @@ func wall_kick():
 		timer.start()
 		
 
-	if $RayCaste.is_colliding() and Input.is_action_just_pressed("ui_select") and not onGround:
+	if $RayCaste.is_colliding() and Input.is_action_just_pressed("ui_up") and not onGround:
 		movement.x = speed*2
 		movement.y = -jumpForce*0.8
 		$AnimatedSprite.set_flip_h(false) 
 		isKicking = true
-		timer.set_wait_time(0.23)
+		timer.set_wait_time(0.3)
 		timer.start()
  
 #controla o movimento no eixo x 
@@ -102,6 +103,8 @@ func _ready():
 
 
 func _physics_process(_delta):
+
+	
 
 	# verifica a direção em que o personagem esta virado e muda a detecção de colisão com o muro
 	estado_raycast()
