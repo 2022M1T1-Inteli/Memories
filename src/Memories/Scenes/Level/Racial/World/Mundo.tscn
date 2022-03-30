@@ -1,8 +1,8 @@
 [gd_scene load_steps=29 format=2]
 
-[ext_resource path="res://Scenes/Level/Racial/Memories/Memoria2.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Level/Racial/Memories/Memoria1.gd" type="Script" id=2]
-[ext_resource path="res://Scenes/Level/Racial/Memories/Memoria3.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Level/Racial/Memories/MemoriaRacial2.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Level/Racial/Memories/MemoriaRacial1.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Level/Racial/Memories/MemoriaRacial3.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Level/Racial/Reload/Area2D.gd" type="Script" id=4]
 [ext_resource path="res://Assets/World/Cenário Racial Escuro.png" type="Texture" id=5]
 [ext_resource path="res://Assets/World/pixil-frame-0 (82).png" type="Texture" id=6]
@@ -162,7 +162,7 @@ position = Vector2( 957, 137 )
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Reload"]
-position = Vector2( 2, 13 )
+position = Vector2( -5, 15 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Reload"]

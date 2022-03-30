@@ -1,12 +1,8 @@
 extends Area2D
 
-var bateu = false
-
-#	conectar botão
 func _ready():
-	connect("body_entered", self, "entrou")
+	pass # Replace with function body.
 
-#	fazer o item sumir quando o jogador passar por ele
-func entrou(event):
-	if event.get_name() == "Jogador":
-		queue_free()
+#Faz com que as memorias se movam em direção ao personagem
+func _physics_process(delta):
+	position += Vector2(-1, 0)
