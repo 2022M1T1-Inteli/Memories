@@ -16,7 +16,7 @@ config/icon="res://Assets/Icon/M.png"
 
 [autoload]
 
-VariaveisGlobais="res://Variaveis Globais.tscn"
+VariaveisGlobais="*res://Variaveis Globais.tscn"
 
 [display]
 

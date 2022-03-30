@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scenes/Level/Racial/Memories/MemoriaRacial2.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Level/Racial/Memories/MemoriaRacial1.gd" type="Script" id=2]
@@ -11,7 +11,6 @@
 [ext_resource path="res://Assets/World/jigsaw-puzzle-303250_1280.png" type="Texture" id=9]
 [ext_resource path="res://Assets/World/Arvores Racial.png" type="Texture" id=10]
 [ext_resource path="res://Assets/World/200px-Chartreuse_verde-limão.jpg" type="Texture" id=11]
-[ext_resource path="res://Scenes/Level/Racial/World/Barra Progresso.gd" type="Script" id=12]
 [ext_resource path="res://Assets/World/1554086.png" type="Texture" id=13]
 [ext_resource path="res://Scenes/Level/Racial/World/Chegada.gd" type="Script" id=14]
 [ext_resource path="res://Scenes/Level/Racial/World/Chegada Branco.gd" type="Script" id=15]
@@ -232,7 +231,6 @@ tile_data = PoolIntArray( -131100, 2, 0, -196371, 2, 0, -65563, 0, 0, -65554, 0,
 
 [node name="Barra Progresso" type="KinematicBody2D" parent="."]
 visible = false
-script = ExtResource( 12 )
 
 [node name="Sprite" type="Sprite" parent="Barra Progresso"]
 position = Vector2( -4624, 296 )
