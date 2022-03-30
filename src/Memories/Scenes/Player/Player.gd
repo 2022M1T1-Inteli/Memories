@@ -5,18 +5,30 @@ const VELOCIDADE_MAX = 80
 const FRICCAO = 500
 var velocidade = Vector2.ZERO
 var isInside = false
+
 #variavel com a animação
 onready var animacaoPlayer = $AnimationPlayer
+
 #varivael que contem todas a amaração de todas as animações dos persongens
 onready var animacaoTree = $AnimationTree
+
 #variavel que pega as animações e devolver pra sser executada
 onready var animacaoState = animacaoTree.get("parameters/playback")
+
+onready var Global = get_node("/root/VariaveisGlobais")
 
 signal cadeiranteFase
 signal homemNegro
 
+func _ready():
+	self.position = Global.position
+
 func _physics_process(delta): 
+	
+	Global.position = self.position
+	
 	isInside = false;
+	
 	#declaração e inicial do vetor
 	var input_vector = Vector2.ZERO
 	
