@@ -17,6 +17,7 @@ func _ready():
 	nextPhrase()
 	$Yes.hide()
 	$No.hide()
+	
 	#funcao para verificar se o caminho é verdadeiro
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):
