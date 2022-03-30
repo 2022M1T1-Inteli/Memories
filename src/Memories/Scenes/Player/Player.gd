@@ -68,6 +68,7 @@ func _on_Homem_Negro_body_entered(body):
 	
 func _on_Homem_Negro_body_exited(body):
 	emit_signal("homemNegro")	
+
 # ao colidir com NPC do cadeirante no mapa chama a função
 func _on_Cadeirante_body_entered(body):	
 	#Troca de Cena	

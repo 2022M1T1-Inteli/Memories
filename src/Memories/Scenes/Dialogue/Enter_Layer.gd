@@ -1,9 +1,7 @@
 extends Sprite
 var tipoCena = ""
-var cena = ""
-var cenaCarregada = ""
 var myNode = preload("res://Scenes/Dialogue/Cadeirante/Dialogue_Cadeirante.tscn")
-
+signal cenaCadeirante
 func _ready():
 	var dialogo = get_tree().get_root().find_node("Player", true, false)
 	dialogo.connect("cadeiranteFase", self, "set_is_visible_cadeirate")		
@@ -20,10 +18,7 @@ func set_is_visible_homem_negro():
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_accept"):
 		if tipoCena == "Cadeirante":
-			var myNode_instance = myNode.instance()
-			add_child(myNode_instance)
+			emit_signal("cenaCadeirante")
 			
 		if tipoCena == "HomemNegro":
-			cenaCarregada = load("res://Scenes/Dialogue/Racial/Dialogo_racial.tscn")
-			cena = cenaCarregada.instance()
-			add_child(cena)
+			pass

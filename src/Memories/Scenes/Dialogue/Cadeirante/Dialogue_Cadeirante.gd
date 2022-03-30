@@ -5,8 +5,9 @@ export var dialogPath = ""
 export(float) var textSpeed = 0.05
 
 var dialog
-var phraseNum = 0
+var phraseNum = -1
 var finished = false
+
 onready var text = $"Text"
 onready var nameNpc = $"Name"
 
@@ -17,16 +18,22 @@ func _ready():
 	nextPhrase()
 	$Yes.hide()
 	$No.hide()
-	
+	$"../Plate".visible = false
+	var dialogo = get_tree().get_root().find_node("Player", true, false)
+	dialogo.connect("cenaCadeirante", self, "set_is_visible_cadeirate")	
 	#funcao para verificar se o caminho é verdadeiro
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):
+		$"../Plate".visible = true		
 		if finished:
 			if phraseNum != 3:
 				nextPhrase()
 		else:
 			text.visible_characters = len(text.text)
-			
+		
+func set_is_visible_cadeirate():
+	$"../Plate".visible = !visible	
+	
 func getDialog()->Array:
 	#instancia o arquivo
 	var file = File.new()
@@ -43,14 +50,13 @@ func getDialog()->Array:
 		return []
 	
 		
-func nextPhrase():	
-	print("comecou")
+func nextPhrase()->void:	
 	if phraseNum == 2:
 		$Yes.show()
 		$No.show()
-#	if phraseNum >= len(dialog[0]["text"][phraseNum]):
-#		queue_free()
-#		return null
+	if phraseNum >= len(dialog[0]["text"][phraseNum]):
+		queue_free()
+		return null
 	finished = false
 	nameNpc.bbcode_text = dialog[0]["name"]
 	text.bbcode_text = dialog[0]["text"][phraseNum]
@@ -64,7 +70,9 @@ func nextPhrase():
 	if phraseNum == 3:
 		$Timer.start()
 		yield($Timer, "timeout")
-		get_tree().change_scene("res://Scenes/Level/Cadeirante/Task/PCD.tscn")
+		print("Ola")
+		
+		get_tree().change_scene("res://Scenes/Level/Cadeirante/Task/PCD-World.tscn")
 	phraseNum +=1
 	return
 
