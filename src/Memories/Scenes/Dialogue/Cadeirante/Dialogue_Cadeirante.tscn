@@ -23,7 +23,7 @@ layer = 10
 [node name="Plate" type="Sprite" parent="."]
 visible = false
 position = Vector2( 160, 136 )
-scale = Vector2( 1, 0.794071 )
+scale = Vector2( 1, 0.794 )
 texture = ExtResource( 3 )
 script = ExtResource( 4 )
 dialogPath = "res://Json/Dialogs.json"
@@ -44,7 +44,7 @@ __meta__ = {
 margin_left = -128.0
 margin_top = -20.0
 margin_right = 128.0
-margin_bottom = 20.0
+margin_bottom = 25.0
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 __meta__ = {

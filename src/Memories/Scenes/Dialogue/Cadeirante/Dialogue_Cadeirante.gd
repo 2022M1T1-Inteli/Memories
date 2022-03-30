@@ -26,7 +26,7 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		$"../Plate".visible = true		
 		if finished:
-			if phraseNum != 3:
+			if phraseNum != 4:
 				nextPhrase()
 		else:
 			text.visible_characters = len(text.text)
@@ -51,7 +51,7 @@ func getDialog()->Array:
 	
 		
 func nextPhrase()->void:	
-	if phraseNum == 2:
+	if phraseNum == 3:
 		$Yes.show()
 		$No.show()
 	if phraseNum >= len(dialog[0]["text"][phraseNum]):
@@ -67,7 +67,7 @@ func nextPhrase()->void:
 		yield($Timer, "timeout")
 	finished = true
 	
-	if phraseNum == 3:
+	if phraseNum == 4:
 		$Timer.start()
 		yield($Timer, "timeout")
 		print("Ola")
@@ -78,7 +78,7 @@ func nextPhrase()->void:
 
 
 func _on_Yes_pressed():
-	phraseNum == 3
+	phraseNum == 4
 	nextPhrase()
 	$Yes.hide()
 	$No.hide()
