@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Assets/Cadeirante/City/road.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Level/Cadeirante/City/road.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Player/Player.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Level/Cadeirante/DialogoFinal.gd" type="Script" id=3]
-[ext_resource path="res://Assets/Cadeirante/City/sky.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Level/Cadeirante/City/sky.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Characters/Cadeirante/Cadeirante.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Buttons/Previous.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Buttons/Next.tscn" type="PackedScene" id=7]
@@ -107,3 +107,6 @@ margin_bottom = 83.0
 custom_colors/default_color = Color( 0.980392, 0.980392, 0.980392, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

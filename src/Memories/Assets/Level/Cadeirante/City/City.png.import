@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/special-000.png-6c656e26264afa3193825ba43df726e4.stex"
+path="res://.import/City.png-090cec8501866dc7f020b7664a4af647.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cadeirante/Special/special-000.png"
-dest_files=[ "res://.import/special-000.png-6c656e26264afa3193825ba43df726e4.stex" ]
+source_file="res://Assets/Level/Cadeirante/City/City.png"
+dest_files=[ "res://.import/City.png-090cec8501866dc7f020b7664a4af647.stex" ]
 
 [params]
 

@@ -13,14 +13,15 @@
 [ext_resource path="res://Assets/Memorie/Memorie_2.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Memorie/Memorie_8.png" type="Texture" id=13]
 [ext_resource path="res://Assets/Cadeirante/Idle/idle-000.png" type="Texture" id=14]
-[ext_resource path="res://Assets/Cadeirante/City/sky.png" type="Texture" id=15]
-[ext_resource path="res://Assets/Cadeirante/City/light.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Level/Cadeirante/City/sky.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Level/Cadeirante/City/light.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Memorie/Memorie_4.png" type="Texture" id=17]
 [ext_resource path="res://Assets/Memorie/Memorie_1.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Memorie/Memorie_6.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Cadeirante/Jump/jump-000.png" type="Texture" id=20]
 [ext_resource path="res://Assets/Memorie/Memorie_5.png" type="Texture" id=21]
 [ext_resource path="res://Assets/Memorie/Memorie_0.png" type="Texture" id=22]
+
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
