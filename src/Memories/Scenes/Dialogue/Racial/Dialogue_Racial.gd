@@ -18,21 +18,21 @@ func _ready():
 	nextPhrase()
 	$Yes.hide()
 	$No.hide()
-	$"../Plate".visible = false
+	$"../Plate_Racial".visible = false
 	var dialogo = get_tree().get_root().find_node("Player", true, false)
-	dialogo.connect("cenaCadeirante", self, "set_is_visible_cadeirate")	
+	dialogo.connect("cenaHomemNegro", self, "setIsVisibleHomem")	
 	#funcao para verificar se o caminho é verdadeiro
-func _physics_process(_delta):	
+func _physics_process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):	
-		$"../Plate".visible = true
+		$"../Plate_Racial".visible = true		
 		if finished:
 			if phraseNum != 4:
 				nextPhrase()
 		else:
 			text.visible_characters = len(text.text)
 		
-func set_is_visible_cadeirate():
-	$"../Plate".visible = !visible	
+func setIsVisibleHomem():
+	$"../Plate_Racial".visible = !visible	
 	
 func getDialog()->Array:
 	#instancia o arquivo
@@ -54,12 +54,12 @@ func nextPhrase()->void:
 	if phraseNum == 3:
 		$Yes.show()
 		$No.show()
-	if phraseNum >= len(dialog[0]["text"][phraseNum]):
+	if phraseNum >= len(dialog[1]["text"][phraseNum]):
 		queue_free()
 		return null
 	finished = false
-	nameNpc.bbcode_text = dialog[0]["name"]
-	text.bbcode_text = dialog[0]["text"][phraseNum]
+	nameNpc.bbcode_text = dialog[1]["name"]
+	text.bbcode_text = dialog[1]["text"][phraseNum]
 	text.visible_characters = 0
 	while text.visible_characters <len(text.text):
 		text.visible_characters += 1
@@ -69,8 +69,8 @@ func nextPhrase()->void:
 	
 	if phraseNum == 4:
 		$Timer.start()
-		yield($Timer, "timeout")
-		get_tree().change_scene("res://Scenes/Level/Cadeirante/Task/PCD-World.tscn")
+		yield($Timer, "timeout")	
+		get_tree().change_scene("res://Scenes/Level/Racial/World/Mundo.tscn")
 	phraseNum +=1
 	return
 
@@ -82,8 +82,8 @@ func _on_Yes_pressed():
 	$No.hide()
 
 func _on_No_pressed():
-#	$"../Plate".visible = false
 #	phraseNum == 0
+#	$"../Sprite".visible = false
 #	$Yes.hide()
 #	$No.hide()
 	pass

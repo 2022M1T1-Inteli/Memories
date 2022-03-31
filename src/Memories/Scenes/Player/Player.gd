@@ -77,7 +77,7 @@ func _on_Cadeirante_body_entered(body):
 #Ao colidir com Magdalene muda de cena
 func _on_Cadeirante_body_exited(body):
 	emit_signal("cadeiranteFase")	
-
+	
 func _on_magdalene_area_body_entered(body):
 #Troca de cena
 	get_tree().change_scene("res://Scenes/Level/Genero/Principal/Principal.tscn")
