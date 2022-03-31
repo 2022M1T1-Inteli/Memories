@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Level/Genero/Igualdade De Genero/scenes/Tileset/Ground/Ground.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Level/Genero/Igualdade De Genero/scenes/Espinho/Espinho.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/Level/Genero/Igualdade De Genero/Sprites/decorations/decorations/flower/flower.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Level/Genero/Igualdade De Genero/Sprites/decorations/decorations/grass/grass2.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Level/Genero/Igualdade De Genero/Sprites/decorations/decorations/tree/tree.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Music and Sounds/Music.mp3" type="AudioStream" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -114,3 +115,7 @@ position = Vector2( 1026, 168 )
 
 [node name="Main_Charecter" parent="." instance=ExtResource( 4 )]
 position = Vector2( 200, 237 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
