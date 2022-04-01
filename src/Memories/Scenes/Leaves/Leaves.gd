@@ -3,7 +3,7 @@ extends KinematicBody2D
 var posicaoMaximaEsquerda = 0
 var posicaoMaximaDireita = 0
 
-# Called when the node enters the scene tree for the first time.
+#animação das gramas
 func _physics_process(delta):
 	
 	
