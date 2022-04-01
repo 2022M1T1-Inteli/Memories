@@ -70,7 +70,7 @@ func nextPhrase()->void:
 	if phraseNum == 4:
 		$Timer.start()
 		yield($Timer, "timeout")
-		get_tree().change_scene("res://Scenes/Level/Cadeirante/Task/PCD-World.tscn")
+		get_tree().change_scene("res://Scenes/Level/Racial/World/Mundo.tscn")
 	phraseNum +=1
 	return
 

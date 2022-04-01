@@ -65,14 +65,19 @@ func _physics_process(delta):
 func _on_Homem_Negro_body_entered(body):
 	#Troca de Cena
 	emit_signal("homemNegro")
+
+
 	
 func _on_Homem_Negro_body_exited(body):
-	emit_signal("homemNegro")	
+	emit_signal("homemNegro")
+
 
 # ao colidir com NPC do cadeirante no mapa chama a função
 func _on_Cadeirante_body_entered(body):	
 	#Troca de Cena	
-	emit_signal("cadeiranteFase")	
+#	emit_signal("cadeiranteFase")	
+	get_tree().change_scene("res://Scenes/Level/Cadeirante/Task/PCD-World.tscn")
+	print("Ola")
 
 #Ao colidir com Magdalene muda de cena
 func _on_Cadeirante_body_exited(body):
