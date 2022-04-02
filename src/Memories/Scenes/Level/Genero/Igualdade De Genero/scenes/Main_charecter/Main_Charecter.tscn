@@ -26,18 +26,19 @@ animations = [ {
 "name": "falling",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "jumping",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "running",
 "speed": 15.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "jumping",
+"speed": 5.0
 } ]
 
 [node name="main_charecter" type="Node2D"]
+position = Vector2( 0, -1 )
 
 [node name="celeste" type="KinematicBody2D" parent="."]
 position = Vector2( 232, 140 )

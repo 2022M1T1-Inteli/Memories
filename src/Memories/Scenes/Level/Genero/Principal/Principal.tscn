@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Level/Genero/Igualdade De Genero/scenes/Tileset/Ground/Ground.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Level/Genero/Igualdade De Genero/scenes/Espinho/Espinho.tscn" type="PackedScene" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://Scenes/Level/Genero/Igualdade De Genero/Sprites/decorations/decorations/grass/grass2.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Level/Genero/Igualdade De Genero/Sprites/decorations/decorations/tree/tree.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Music and Sounds/Music.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Scenes/Level/Racial/Memories/memoria.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Level/Racial/Memories/memoria_genero.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/Level/Genero/Igualdade De Genero/scenes/Main_charecter/Main_Charecter_extension.gd" type="Script" id=11]
 
 [node name="Node2D" type="Node2D"]
 
@@ -115,7 +118,19 @@ position = Vector2( 1026, 168 )
 
 [node name="Main_Charecter" parent="." instance=ExtResource( 4 )]
 position = Vector2( 200, 237 )
+script = ExtResource( 11 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 autoplay = true
+
+[node name="memoria" parent="." instance=ExtResource( 9 )]
+position = Vector2( 952, 302 )
+script = ExtResource( 10 )
+
+[node name="memoria2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 395, 82 )
+script = ExtResource( 10 )
+
+[connection signal="body_entered" from="memoria" to="Main_Charecter" method="_on_memoria_body_entered"]
+[connection signal="body_entered" from="memoria2" to="Main_Charecter" method="_on_memoria2_body_entered"]
