@@ -21,10 +21,12 @@ signal cadeiranteFase
 signal homemNegro
 
 func _ready():
+	# retorna o personagem para posição salva
 	self.position = Global.position
 
 func _physics_process(delta): 
 	
+	#salva a posição do personagem
 	Global.position = self.position
 	
 	isInside = false;
@@ -85,4 +87,4 @@ func _on_Cadeirante_body_exited(body):
 	
 func _on_magdalene_area_body_entered(body):
 #Troca de cena
-	get_tree().change_scene("res://Scenes/Level/Genero/Principal/Principal.tscn")
+	get_tree().change_scene("res://Scenes/Level/Genero/Igualdade De Genero/scenes/Principal/Principal.tscn")
