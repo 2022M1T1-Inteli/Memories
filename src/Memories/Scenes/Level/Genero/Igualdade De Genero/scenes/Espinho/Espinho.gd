@@ -7,4 +7,4 @@ func _on_Area2D_body_entered(body):
 	#checa se  o corpo do player bateu no espinho e o leva ao começo da cena
 	if body.name == "celeste":
 		Global.morte +=1
-		get_tree().change_scene("res://Scenes/Level/Genero/Principal/Principal.tscn")
+		get_tree().change_scene("res://Scenes/Level/Genero/Igualdade De Genero/scenes/Principal/Principal.tscn")
