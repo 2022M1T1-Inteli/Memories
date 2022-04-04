@@ -178,6 +178,7 @@ margin_top = -35.0
 margin_right = -105.0
 margin_bottom = -15.0
 custom_styles/normal = SubResource( 1 )
+script = null
 
 [node name="memoria" type="Area2D" parent="."]
 position = Vector2( 655, 114 )
@@ -189,7 +190,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="memoria"]
 scale = Vector2( 0.033, 0.031 )
 frames = SubResource( 5 )
-frame = 3
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="memoria"]
@@ -206,7 +207,7 @@ __meta__ = {
 position = Vector2( 0.222656, -0.258057 )
 scale = Vector2( 0.033, 0.031 )
 frames = SubResource( 7 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="memoria2"]
@@ -224,6 +225,7 @@ __meta__ = {
 position = Vector2( 0.222656, -0.258057 )
 scale = Vector2( 0.033, 0.031 )
 frames = SubResource( 7 )
+frame = 3
 playing = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="memoria3"]

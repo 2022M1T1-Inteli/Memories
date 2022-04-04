@@ -15,6 +15,7 @@ onready var GameOverNode = get_parent().get_parent().get_parent().get_node("Game
 onready var canvasLayer = get_parent().get_parent().get_node("CanvasLayer/scoreNow")
 onready var canvasLayerGO = get_parent().get_parent().get_parent().get_node("GameOverNode/CanvasLayerGO/finalScore")
 
+
 func _ready():
 	pass	
 	
