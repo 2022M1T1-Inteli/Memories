@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Buttons/Yes.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Buttons/No.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Dialog box/Plate-dialogo.png" type="Texture" id=3]
-[ext_resource path="res://Scenes/Dialogue/Racial/Dialogue_Racial.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Dialogue/Dialogue.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Dialog box/Overlock-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Assets/Dialog box/Overlock-BoldItalic.ttf" type="DynamicFontData" id=6]
 
@@ -16,19 +16,24 @@ font_data = ExtResource( 6 )
 size = 12
 font_data = ExtResource( 5 )
 
-[node name="Dialog_Racial" type="CanvasLayer"]
+[sub_resource type="DynamicFont" id=3]
+size = 11
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+font_data = ExtResource( 6 )
+
+[node name="Dialog" type="CanvasLayer"]
 process_priority = 10
 layer = 10
 
-[node name="Plate_Racial" type="Sprite" parent="."]
-visible = false
+[node name="Plate" type="Sprite" parent="."]
 position = Vector2( 160, 136 )
 scale = Vector2( 1, 0.794 )
 texture = ExtResource( 3 )
 script = ExtResource( 4 )
 dialogPath = "res://Json/Dialogs.json"
 
-[node name="Name" type="RichTextLabel" parent="Plate_Racial"]
+[node name="Name" type="RichTextLabel" parent="Plate"]
 margin_left = -134.0
 margin_top = -46.2594
 margin_right = 96.0
@@ -40,7 +45,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Text" type="RichTextLabel" parent="Plate_Racial"]
+[node name="Text" type="RichTextLabel" parent="Plate"]
 margin_left = -128.0
 margin_top = -20.0
 margin_right = 128.0
@@ -51,9 +56,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer" type="Timer" parent="Plate_Racial"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Plate"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -182.5
+margin_top = -57.0
+margin_right = -103.5
+margin_bottom = -39.0
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_text = "Pressione espaço"
+text = "Pressione espaço"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Yes" type="Button" parent="Plate_Racial"]
+[node name="Timer" type="Timer" parent="Plate"]
+
+[node name="Yes" type="Button" parent="Plate"]
 margin_left = -150.0
 margin_top = -66.7447
 margin_right = -88.0
@@ -64,7 +85,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="No" type="Button" parent="Plate_Racial"]
+[node name="No" type="Button" parent="Plate"]
 margin_left = 87.0
 margin_top = -66.7447
 margin_right = 149.0
@@ -75,5 +96,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Plate_Racial/Yes" to="Plate_Racial" method="_on_Yes_pressed"]
-[connection signal="pressed" from="Plate_Racial/No" to="Plate_Racial" method="_on_No_pressed"]
+[node name="TimerTrocaCena" type="Timer" parent="Plate"]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="pressed" from="Plate/Yes" to="Plate" method="_on_Yes_pressed"]
+[connection signal="pressed" from="Plate/No" to="Plate" method="_on_No_pressed"]
