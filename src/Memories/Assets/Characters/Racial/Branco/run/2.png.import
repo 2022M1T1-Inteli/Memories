@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Special.png-aa8e936581d7bb4ff69899a393ce7e4a.stex"
+path="res://.import/2.png-e384ab6a2fe877bf4a918a914390feec.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Racial/Special.png"
-dest_files=[ "res://.import/Special.png-aa8e936581d7bb4ff69899a393ce7e4a.stex" ]
+source_file="res://Assets/Characters/Racial/Branco/run/2.png"
+dest_files=[ "res://.import/2.png-e384ab6a2fe877bf4a918a914390feec.stex" ]
 
 [params]
 

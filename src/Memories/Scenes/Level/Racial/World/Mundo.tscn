@@ -142,7 +142,7 @@ icon = ExtResource( 16 )
 flat = true
 
 [node name="HomemBranco" parent="." instance=ExtResource( 8 )]
-position = Vector2( 40, -24 )
+position = Vector2( 40, -28 )
 
 [node name="Reload" type="Area2D" parent="."]
 position = Vector2( 957, 137 )
@@ -157,6 +157,7 @@ position = Vector2( 796, 173 )
 shape = SubResource( 2 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+visible = false
 
 [node name="Sprite" type="Sprite" parent="ParallaxLayer"]
 position = Vector2( 2566.99, 212 )

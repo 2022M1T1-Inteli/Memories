@@ -1,23 +1,44 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Assets/Characters/Racial/Homem Branco.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Characters/Racial/Branco/run/3.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Characters/Racial/HomemBranco.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Characters/Racial/Branco/run/5.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Characters/Racial/Branco/run/2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Characters/Racial/Branco/run/4.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Characters/Racial/Branco/idle/3.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Characters/Racial/Branco/idle/2.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Characters/Racial/Branco/run/0.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Characters/Racial/Branco/run/1.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Characters/Racial/Branco/idle/0.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Characters/Racial/Branco/idle/1.png" type="Texture" id=11]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "run",
+"speed": 8.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7, 11 )
+extents = Vector2( 6, 10 )
 
 [node name="HomemBranco" type="KinematicBody2D"]
-position = Vector2( -1, -15 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 14.5, -19.75 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 12, -12 )
 scale = Vector2( 0.78125, 0.78125 )
-texture = ExtResource( 1 )
+frames = SubResource( 2 )
+animation = "idle"
+frame = 3
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 13, -12 )
+position = Vector2( 12, -12 )
 shape = SubResource( 1 )
