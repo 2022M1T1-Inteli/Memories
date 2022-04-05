@@ -64,35 +64,18 @@ func _physics_process(delta):
 
 # ao colidir com NPC do homem negro no mapa chama a função
 func _on_Homem_Negro_body_entered(body):
-	#Troca de Cena
-<<<<<<< Updated upstream
-	emit_signal("homemNegro")
-
-
-	
-func _on_Homem_Negro_body_exited(body):
-	emit_signal("homemNegro")
-
-=======
-	Global.dialogo = "homemNegro"
+	Global.dialogo = "homemNegro"	
 	emit_signal("dialogo")
 	
 func _on_Homem_Negro_body_exited(body):
 	Global.dialogo = "homemNegro"	
 	emit_signal("dialogo")	
->>>>>>> Stashed changes
 
 # ao colidir com NPC do cadeirante no mapa chama a função
 func _on_Cadeirante_body_entered(body):	
 	#Troca de Cena	
-<<<<<<< Updated upstream
-#	emit_signal("cadeiranteFase")	
-	get_tree().change_scene("res://Scenes/Level/Cadeirante/Task/PCD-World.tscn")
-	print("Ola")
-=======
 	Global.dialogo = "cadeirante"	
 	emit_signal("dialogo")	
->>>>>>> Stashed changes
 
 #Ao colidir com Magdalene muda de cena
 func _on_Cadeirante_body_exited(body):
