@@ -26,15 +26,15 @@ animations = [ {
 "name": "falling",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "running",
-"speed": 15.0
-}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "jumping",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "running",
+"speed": 15.0
 } ]
 
 [node name="main_charecter" type="Node2D"]
@@ -67,12 +67,12 @@ cast_to = Vector2( -10, 0 )
 
 [node name="Timer" type="Timer" parent="celeste"]
 
-[node name="Pause_Layer" parent="celeste" instance=ExtResource( 10 )]
-
 [node name="Pause_Button" parent="celeste" instance=ExtResource( 9 )]
-margin_left = 140.0
+margin_left = 141.0
 margin_top = -91.0
-margin_right = 160.0
+margin_right = 161.0
 margin_bottom = -71.0
+
+[node name="Pause_Layer" parent="." instance=ExtResource( 10 )]
 
 [connection signal="timeout" from="celeste/Timer" to="celeste" method="_on_Timer_timeout"]

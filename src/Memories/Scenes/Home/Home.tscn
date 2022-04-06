@@ -57,6 +57,7 @@ margin_left = 135.0
 margin_top = 80.0
 margin_right = 186.0
 margin_bottom = 101.0
+reference_path = ""
 
 [node name="Options" parent="Buttons" instance=ExtResource( 2 )]
 margin_left = 135.0

@@ -34,4 +34,4 @@ func _on_memoria3_body_entered(body):
 	#faz voltar da última memória a personagem
 	Global.mem +=1
 	get_parent().get_node("memoria3").queue_free()
-	Global.posicao_celeste = self.get_child(0).position
+	get_tree().change_scene("res://Scenes/World/World.tscn")
