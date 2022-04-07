@@ -89,4 +89,4 @@ func _on_memoria2_body_entered(body):
 #Coleta a terceira moeda e chama a cena de parabéns
 func _on_memoria3_body_entered(body):
 	get_parent().get_parent().get_node("memoria3").queue_free()
-	get_tree().change_scene("res://Scenes/Level/Cadeirante/Congrats.tscn")
+	get_tree().change_scene("res://Scenes/World/World.tscn")
