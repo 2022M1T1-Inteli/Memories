@@ -170,6 +170,7 @@ position = Vector2( 796, 173 )
 shape = SubResource( 2 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+visible = false
 
 [node name="Sprite" type="Sprite" parent="ParallaxLayer"]
 position = Vector2( 2566.99, 212 )
