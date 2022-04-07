@@ -47,7 +47,7 @@ __meta__ = {
 
 [node name="Text" type="RichTextLabel" parent="Plate"]
 margin_left = -128.0
-margin_top = -20.0
+margin_top = -26.0
 margin_right = 128.0
 margin_bottom = 25.0
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -56,7 +56,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Plate"]
+[node name="Instrucao" type="RichTextLabel" parent="Plate"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -97,7 +97,7 @@ __meta__ = {
 }
 
 [node name="TimerTrocaCena" type="Timer" parent="Plate"]
-wait_time = 3.0
+wait_time = 2.0
 one_shot = true
 autostart = true
 

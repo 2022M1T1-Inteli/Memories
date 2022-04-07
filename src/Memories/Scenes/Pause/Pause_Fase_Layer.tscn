@@ -1,0 +1,89 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/Buttons/Start-Selected.tres" type="StyleBox" id=1]
+[ext_resource path="res://Assets/Music and Sounds/Menu Move.wav" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Buttons/Home.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Buttons/Paused.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Music and Sounds/Menu Select.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Buttons/Back.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Pause/Pause_Fase_Layer.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Buttons/Exit.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Pause/Pause.tscn" type="PackedScene" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[node name="Pause_Fase_Layer" type="CanvasLayer"]
+
+[node name="Pause_Fase_Layer" parent="." instance=ExtResource( 9 )]
+pause_mode = 2
+visible = false
+script = ExtResource( 7 )
+
+[node name="Back" type="Button" parent="Pause_Fase_Layer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -25.0
+margin_top = 60.0
+margin_right = 26.0
+margin_bottom = 80.0
+focus_neighbour_top = NodePath("../Exit")
+focus_neighbour_bottom = NodePath("../Home")
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = SubResource( 1 )
+icon = ExtResource( 6 )
+flat = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Home" type="Button" parent="Pause_Fase_Layer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -10.0
+margin_right = 25.0
+margin_bottom = 16.0
+focus_neighbour_top = NodePath("../Back")
+focus_neighbour_bottom = NodePath("../Exit")
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 3 )
+flat = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" parent="Pause_Fase_Layer" instance=ExtResource( 8 )]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -25.0
+margin_top = 106.0
+margin_right = 25.0
+margin_bottom = 126.0
+focus_neighbour_top = NodePath("../Home")
+focus_neighbour_bottom = NodePath("../Back")
+reference_path = "res://Scenes/World/World.tscn"
+
+[node name="Paused" type="Sprite" parent="Pause_Fase_Layer"]
+position = Vector2( 160, 50 )
+scale = Vector2( 1.2, 1.1 )
+texture = ExtResource( 4 )
+
+[node name="Click" type="AudioStreamPlayer" parent="Pause_Fase_Layer"]
+stream = ExtResource( 5 )
+
+[node name="Hover" type="AudioStreamPlayer" parent="Pause_Fase_Layer"]
+stream = ExtResource( 2 )
+
+[connection signal="mouse_entered" from="Pause_Fase_Layer/Back" to="Pause_Fase_Layer" method="_on_Back_mouse_entered"]
+[connection signal="pressed" from="Pause_Fase_Layer/Back" to="Pause_Fase_Layer" method="_on_Back_pressed"]
+[connection signal="mouse_entered" from="Pause_Fase_Layer/Home" to="Pause_Fase_Layer" method="_on_Home_mouse_entered"]
+[connection signal="pressed" from="Pause_Fase_Layer/Home" to="Pause_Fase_Layer" method="_on_Home_pressed"]

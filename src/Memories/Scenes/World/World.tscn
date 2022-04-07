@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=2]
+[gd_scene load_steps=100 format=2]
 
 [ext_resource path="res://Assets/World/CliffTileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/World/GrassBackground.png" type="Texture" id=2]
@@ -45,6 +45,7 @@
 [ext_resource path="res://Scenes/Characters/Genero/Genero.tscn" type="PackedScene" id=43]
 [ext_resource path="res://Scenes/Pause/Pause_Button.tscn" type="PackedScene" id=44]
 [ext_resource path="res://Scenes/Pause/Pause_Layer.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Scenes/World/World.gd" type="Script" id=46]
 [ext_resource path="res://Scenes/Dialogue/Enter_Layer.tscn" type="PackedScene" id=49]
 
 [sub_resource type="TileSet" id=1]
@@ -531,6 +532,7 @@ extents = Vector2( 8, 14.5 )
 extents = Vector2( 13.25, 13.25 )
 
 [node name="Word" type="Node2D"]
+script = ExtResource( 46 )
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 136, 97 )
@@ -724,7 +726,7 @@ position = Vector2( 492, -217 )
 
 [node name="Enter_Layer" parent="Direita-1/Cadeirante/Cadeirante" instance=ExtResource( 49 )]
 position = Vector2( -7, -16 )
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.4, 0.4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direita-1/Cadeirante"]
 position = Vector2( 489, -205 )
@@ -1274,7 +1276,7 @@ scale = Vector2( 0.802083, 0.802083 )
 
 [node name="Enter_Layer" parent="Centro-Meio/Homem_Negro/Sprite" instance=ExtResource( 49 )]
 position = Vector2( -0.935104, -24.9351 )
-scale = Vector2( 0.411458, 0.411458 )
+scale = Vector2( 0.4, 0.4 )
 
 [node name="Poste" parent="Centro-Meio" instance=ExtResource( 22 )]
 position = Vector2( 7, -1 )
@@ -1364,15 +1366,6 @@ position = Vector2( 559, -10 )
 [node name="grass2" parent="Centro-Meio-Direita-2" instance=ExtResource( 17 )]
 position = Vector2( 559, -26 )
 
-[node name="magdalene_area" type="Area2D" parent="Centro-Meio-Direita-2"]
-
-[node name="celeste" parent="Centro-Meio-Direita-2/magdalene_area" instance=ExtResource( 43 )]
-position = Vector2( 542, 200 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Centro-Meio-Direita-2/magdalene_area"]
-position = Vector2( 542, 200 )
-shape = SubResource( 54 )
-
 [node name="Centro-Meio-Baixo-Direita-1" type="YSort" parent="."]
 
 [node name="Tronco" parent="Centro-Meio-Baixo-Direita-1" instance=ExtResource( 29 )]
@@ -1400,7 +1393,7 @@ position = Vector2( 603, 154 )
 position = Vector2( 584, 154 )
 
 [node name="Pedra3" parent="Centro-Meio-Baixo-Direita-1" instance=ExtResource( 26 )]
-position = Vector2( 552, 176 )
+position = Vector2( 541, 157 )
 
 [node name="Pedra1" parent="Centro-Meio-Baixo-Direita-1" instance=ExtResource( 19 )]
 position = Vector2( 513, 131 )
@@ -1425,6 +1418,19 @@ position = Vector2( 615, 199 )
 
 [node name="grass2" parent="Centro-Meio-Baixo-Direita-1" instance=ExtResource( 17 )]
 position = Vector2( 599, 198 )
+
+[node name="magdalene_area" type="Area2D" parent="Centro-Meio-Baixo-Direita-1"]
+
+[node name="celeste" parent="Centro-Meio-Baixo-Direita-1/magdalene_area" instance=ExtResource( 43 )]
+position = Vector2( 542, 200 )
+
+[node name="Enter_Layer" parent="Centro-Meio-Baixo-Direita-1/magdalene_area/celeste" instance=ExtResource( 49 )]
+position = Vector2( 1, -21 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Centro-Meio-Baixo-Direita-1/magdalene_area"]
+position = Vector2( 542, 200 )
+shape = SubResource( 54 )
 
 [node name="Centro-Meio-Baixo-Esquerda-1" type="YSort" parent="."]
 
@@ -1829,4 +1835,5 @@ margin_bottom = -67.0
 [connection signal="body_exited" from="Direita-1/Cadeirante" to="Player" method="_on_Cadeirante_body_exited"]
 [connection signal="body_entered" from="Centro-Meio/Homem_Negro" to="Player" method="_on_Homem_Negro_body_entered"]
 [connection signal="body_exited" from="Centro-Meio/Homem_Negro" to="Player" method="_on_Homem_Negro_body_exited"]
-[connection signal="body_entered" from="Centro-Meio-Direita-2/magdalene_area" to="Player" method="_on_magdalene_area_body_entered"]
+[connection signal="body_entered" from="Centro-Meio-Baixo-Direita-1/magdalene_area" to="Player" method="_on_magdalene_area_body_entered"]
+[connection signal="body_exited" from="Centro-Meio-Baixo-Direita-1/magdalene_area" to="Player" method="_on_magdalene_area_body_exited"]

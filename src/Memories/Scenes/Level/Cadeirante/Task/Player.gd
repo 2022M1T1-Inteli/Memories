@@ -14,7 +14,7 @@ var keyPressed = false
 onready var GameOverNode = get_parent().get_parent().get_parent().get_node("GameOverNode")
 onready var canvasLayer = get_parent().get_parent().get_node("CanvasLayer/scoreNow")
 onready var canvasLayerGO = get_parent().get_parent().get_parent().get_node("GameOverNode/CanvasLayerGO/finalScore")
-
+onready var Global = get_node("/root/VariaveisGlobais")
 
 func _ready():
 	pass	
@@ -88,5 +88,11 @@ func _on_memoria2_body_entered(body):
 
 #Coleta a terceira moeda e chama a cena de parabéns
 func _on_memoria3_body_entered(body):
-	get_parent().get_parent().get_node("memoria3").queue_free()
+	if Global.dialogo == "cadeirante":
+		Global.para_dialogo = 16
+	if Global.dialogo == "homemNegro":
+		Global.para_dialogo = 21
+	if Global.dialogo == "genero":
+		Global.para_dialogo = 0
+	Global.add_dialogo = true
 	get_tree().change_scene("res://Scenes/World/World.tscn")

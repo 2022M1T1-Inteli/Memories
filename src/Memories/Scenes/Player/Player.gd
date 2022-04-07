@@ -64,24 +64,32 @@ func _physics_process(delta):
 
 # ao colidir com NPC do homem negro no mapa chama a função
 func _on_Homem_Negro_body_entered(body):
-	Global.dialogo = "homemNegro"	
+	Global.dialogo = "homemNegro"
+	Global.dialogoAtivo = true	
 	emit_signal("dialogo")
 	
 func _on_Homem_Negro_body_exited(body):
-	Global.dialogo = "homemNegro"	
+	Global.dialogoAtivo = false
 	emit_signal("dialogo")	
 
 # ao colidir com NPC do cadeirante no mapa chama a função
 func _on_Cadeirante_body_entered(body):	
 	#Troca de Cena	
-	Global.dialogo = "cadeirante"	
+	Global.dialogo = "cadeirante"
+	Global.dialogoAtivo = true
 	emit_signal("dialogo")	
 
 #Ao colidir com Magdalene muda de cena
 func _on_Cadeirante_body_exited(body):
-	Global.dialogo = "cadeirante"
+	Global.dialogoAtivo = false
 	emit_signal("dialogo")	
 	
 func _on_magdalene_area_body_entered(body):
 #Troca de cena
-	get_tree().change_scene("res://Scenes/Level/Genero/Igualdade De Genero/scenes/Principal/Principal.tscn")
+	Global.dialogo = "genero"
+	Global.dialogoAtivo = true
+	emit_signal("dialogo")	
+
+func _on_magdalene_area_body_exited(body):
+	Global.dialogoAtivo = false
+	emit_signal("dialogo")	
