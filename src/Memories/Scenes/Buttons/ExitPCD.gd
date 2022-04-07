@@ -34,6 +34,8 @@ func _on_Button_Pressed():
 	
 	# função ao passar o click
 	#verifica se o caminho da cena não esta vazio
+	get_tree().paused = false
+	
 	if(reference_path != ""):
 		
 		#se não tiver toca o som de clicado
