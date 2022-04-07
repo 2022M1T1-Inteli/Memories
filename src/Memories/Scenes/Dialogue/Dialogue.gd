@@ -59,8 +59,6 @@ func getDialog()->Array:
 
 
 func nextPhrase()->void:
-	print(Global.posicao_dialogo)
-	
 	if Global.posicao_dialogo >= len(dialog[index]["text"]):
 		queue_free()
 	finished = false
