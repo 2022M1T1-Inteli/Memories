@@ -154,6 +154,13 @@ margin_bottom = -30.0
 
 [node name="Pause_Fase_Layer" parent="Jogador" instance=ExtResource( 9 )]
 
+[node name="Intrucao" type="Label" parent="Jogador"]
+margin_left = 48.0
+margin_top = 82.0
+margin_right = 226.0
+margin_bottom = 96.0
+text = "Pressione espaço para jogar"
+
 [node name="HomemBranco" parent="." instance=ExtResource( 8 )]
 position = Vector2( 40, -28 )
 

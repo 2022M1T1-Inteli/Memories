@@ -22,6 +22,7 @@ func _physics_process(delta):
 		
 #	iniciar a velocidade do jogador
 	if iniciou == true:
+		$Intrucao.visible = false
 		velocidade.x = SPEED
 #		animacaoPlayer.stop()
 #	jogador pula se o espaço for apertado
