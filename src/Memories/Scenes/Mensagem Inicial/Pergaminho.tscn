@@ -70,10 +70,7 @@ Para isso, eu preciso andar e encontrar algumas pessoas ao longo do caminho.
 Elas irão me contar um pouco sobre a vida delas.
 E acredito que isso será encantador!
 Vamos nessa!!!
-Para andar pressione as setas do seu teclado (cima, baixo, direita e esquerda)."
-__meta__ = {
-"_edit_use_anchors_": false
-}
+Para andar pressione as setas do seu teclado (cima, baixo, direita,  esquerda e aperte enter para falar com o aldeão). "
 
 [node name="Next" parent="." instance=ExtResource( 11 )]
 margin_left = 186.358
