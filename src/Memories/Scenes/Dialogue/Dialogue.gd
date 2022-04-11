@@ -23,7 +23,6 @@ func _ready():
 	$No.hide()
 	$"../Plate".visible = true
 	nextPhrase()
-	print($"../Plate".visible)
 	#funcao para verificar se o caminho é verdadeiro
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("jump"):

@@ -34,4 +34,7 @@ func _on_memoria3_body_entered(body):
 	#faz voltar da última memória a personagem
 	Global.mem +=1
 	get_parent().get_node("memoria3").queue_free()
+	if Global.dialogo == "genero":
+		Global.para_dialogo = 16
+	Global.add_dialogo = true
 	get_tree().change_scene("res://Scenes/World/World.tscn")
