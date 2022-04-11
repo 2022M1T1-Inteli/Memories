@@ -33,6 +33,7 @@ May the force be with you!
 
 -Raiz<br>
 |<br>
+|-->apresentações<br>
 |-->documentos<br>
   &emsp;|-->antigos<br>
   &emsp;|GDD.docx ou Documentação.docx<br>
@@ -42,6 +43,7 @@ May the force be with you!
   &emsp;|-->HTML<br>
 |-->imagens<br>
 |-->src<br>
+  &emsp;|-->Memories<br>
 |readme.md<br>
 |license.txt<br>
 
