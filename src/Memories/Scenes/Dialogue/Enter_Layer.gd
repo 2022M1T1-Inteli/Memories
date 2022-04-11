@@ -14,9 +14,8 @@ func set_is_visible():
 		remove_child(cena)
 
 func _unhandled_input(event):
-	if event.is_action_pressed("ui_accept") and $"../Enter_Layer".visible == true:		
-#		if Global.dialogoAtivo == true:
-#			emit_signal("chamaCena")
+	if event.is_action_pressed("ui_accept") and $"../Enter_Layer".visible == true:
+		print(Global.dialogoAtivo)		
+		if Global.dialogoAtivo == true:
 			cena = load("res://Scenes/Dialogue/Dialogue.tscn").instance()
 			add_child(cena)
-#			Global.dialogoAtivo = false

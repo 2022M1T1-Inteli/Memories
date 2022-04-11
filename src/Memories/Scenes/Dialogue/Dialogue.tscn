@@ -75,12 +75,13 @@ __meta__ = {
 [node name="Timer" type="Timer" parent="Plate"]
 
 [node name="Yes" type="Button" parent="Plate"]
-margin_left = -150.0
+margin_left = -149.0
 margin_top = -66.7447
-margin_right = -88.0
+margin_right = -87.0
 margin_bottom = -40.7447
 icon = ExtResource( 1 )
 flat = true
+clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -97,7 +98,6 @@ __meta__ = {
 }
 
 [node name="TimerTrocaCena" type="Timer" parent="Plate"]
-wait_time = 2.0
 one_shot = true
 autostart = true
 

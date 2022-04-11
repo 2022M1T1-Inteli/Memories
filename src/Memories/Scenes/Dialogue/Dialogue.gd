@@ -15,18 +15,15 @@ onready var Global = get_node("/root/VariaveisGlobais")
 
 func _ready():
 	verifcaDiaolog()
-#	var dialogo = get_tree().get_root().find_node("Enter_Layer", true, false)
-#	dialogo.connect("chamaCena", self, "setIsVisible")
 	setIsVisible()
 	$Timer.wait_time = textSpeed
-	$TimerTrocaCena.start()
 	dialog = getDialog()
 	assert(dialog, "Dialogo não encontrado")
 	$Yes.hide()
 	$No.hide()
 	$"../Plate".visible = true
 	nextPhrase()
-	
+	print($"../Plate".visible)
 	#funcao para verificar se o caminho é verdadeiro
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("jump"):
@@ -57,41 +54,42 @@ func getDialog()->Array:
 	else:
 		return []
 
-
 func nextPhrase()->void:
 	if Global.posicao_dialogo >= len(dialog[index]["text"]):
+		Global.dialogoAtivo = true
 		queue_free()
-	finished = false
-	nameNpc.bbcode_text = dialog[index]["name"]
-	text.bbcode_text = dialog[index]["text"][Global.posicao_dialogo]
-	text.visible_characters = 0
-	while text.visible_characters <len(text.text):
-		text.visible_characters += 1
-		$Timer.start()
-		yield($Timer, "timeout")
-	a = a +1
-	Global.posicao_dialogo = a
-	finished = true
-	if Global.posicao_dialogo == showBtn:
-		$Yes.show()
-		$No.show()
-		$Instrucao.hide()
-	if Global.posicao_dialogo == Global.para_dialogo:
-		$TimerTrocaCena.start()
-		yield($TimerTrocaCena, "timeout")
-		if Global.dialogo == "cadeirante":
-			get_tree().change_scene("res://Scenes/Level/Cadeirante/Task/PCD-World.tscn")
-		if Global.dialogo == "homemNegro":
-			get_tree().change_scene("res://Scenes/Level/Racial/World/Mundo.tscn")
-		if Global.dialogo == "genero":
-			get_tree().change_scene("res://Scenes/Level/Genero/Igualdade De Genero/scenes/Principal/Principal.tscn")
-	return
-
+	else:
+		finished = false
+		nameNpc.bbcode_text = dialog[index]["name"]
+		text.bbcode_text = dialog[index]["text"][Global.posicao_dialogo]
+		text.visible_characters = 0
+		while text.visible_characters <len(text.text):
+			text.visible_characters += 1
+			$Timer.start()
+			yield($Timer, "timeout")
+		a = a +1
+		Global.posicao_dialogo = a
+		finished = true
+		if Global.posicao_dialogo == showBtn:
+			$Yes.show()
+			$No.show()
+			$Instrucao.hide()
+		if Global.posicao_dialogo == Global.para_dialogo:
+			$TimerTrocaCena.start()
+			yield($TimerTrocaCena, "timeout")
+			if Global.dialogo == "cadeirante":
+				get_tree().change_scene("res://Scenes/Level/Cadeirante/Task/PCD-World.tscn")
+			if Global.dialogo == "homemNegro":
+				get_tree().change_scene("res://Scenes/Level/Racial/World/Mundo.tscn")
+			if Global.dialogo == "genero":
+				get_tree().change_scene("res://Scenes/Level/Genero/Igualdade De Genero/scenes/Principal/Principal.tscn")
+		return
 
 func _on_Yes_pressed():
 	$Yes.hide()
 	$No.hide()
 	nextPhrase()
+	
 	
 func verifcaDiaolog():
 	if Global.dialogo == "cadeirante":
@@ -103,16 +101,14 @@ func verifcaDiaolog():
 		showBtn = 13
 		Global.para_dialogo = 14
 	if Global.dialogo == "genero":
-		index = 1
+		index = 2
 		showBtn = 6
+		Global.para_dialogo = 7
 	trocaCenas = showBtn
 	if Global.add_dialogo == true:
 		a = Global.posicao_dialogo
 	if Global.add_dialogo == false:
 		Global.posicao_dialogo = 0
-	print(Global.posicao_dialogo)
 		
 func _on_No_pressed():
 	get_tree().change_scene("res://Scenes/World/World.tscn")
-	
-
