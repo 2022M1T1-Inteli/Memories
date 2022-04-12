@@ -38,3 +38,7 @@ func _on_memoria3_body_entered(body):
 		Global.para_dialogo = 16
 	Global.add_dialogo = true
 	get_tree().change_scene("res://Scenes/World/World.tscn")
+
+
+func _on_Area2D_body_entered(body):
+	get_tree().change_scene("res://Scenes/Level/Genero/Igualdade De Genero/scenes/Principal/Principal.tscn")
