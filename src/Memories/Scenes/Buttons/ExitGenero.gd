@@ -10,7 +10,7 @@ onready var audioClick = $Click
 
 #instancia o player do audio click
 onready var audioHover = $Hover
-
+onready var Global = get_node("/root/VariaveisGlobais")
 func _ready():
 	
 	
@@ -47,6 +47,9 @@ func _on_Button_Pressed():
 	yield(audioClick, "finished")
 		
 		#troca a cena
+	if Global.dialogo == "genero":
+		Global.para_dialogo = 16
+	Global.add_dialogo = true
 	get_tree().change_scene("res://Scenes/World/World.tscn")
 		
 
