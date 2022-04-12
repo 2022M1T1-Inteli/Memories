@@ -56,6 +56,7 @@ func getDialog()->Array:
 func nextPhrase()->void:
 	if Global.posicao_dialogo >= len(dialog[index]["text"]):
 		Global.dialogoAtivo = true
+		Global.posicao_dialogo = 0
 		queue_free()
 	else:
 		finished = false
@@ -88,8 +89,7 @@ func _on_Yes_pressed():
 	$Yes.hide()
 	$No.hide()
 	nextPhrase()
-	
-	
+		
 func verifcaDiaolog():
 	if Global.dialogo == "cadeirante":
 		index = 0
