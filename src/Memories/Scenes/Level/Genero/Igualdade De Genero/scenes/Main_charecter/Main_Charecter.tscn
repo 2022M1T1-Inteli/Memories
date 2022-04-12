@@ -68,10 +68,10 @@ cast_to = Vector2( -10, 0 )
 [node name="Timer" type="Timer" parent="celeste"]
 
 [node name="Pause_Button" parent="celeste" instance=ExtResource( 9 )]
-margin_left = 141.0
-margin_top = -91.0
-margin_right = 161.0
-margin_bottom = -71.0
+margin_left = -155.0
+margin_top = -85.0
+margin_right = -135.0
+margin_bottom = -65.0
 
 [node name="Pause_Layer" parent="." instance=ExtResource( 10 )]
 

@@ -11,9 +11,7 @@ var score = 0
 var paused = true
 var keyPressed = false
 
-onready var GameOverNode = get_parent().get_parent().get_parent().get_node("GameOverNode")
 onready var canvasLayer = get_parent().get_parent().get_node("CanvasLayer/scoreNow")
-onready var canvasLayerGO = get_parent().get_parent().get_parent().get_node("GameOverNode/CanvasLayerGO/finalScore")
 onready var Global = get_node("/root/VariaveisGlobais")
 
 func _ready():
@@ -73,6 +71,13 @@ func _on_Detect_body_entered(body):
 
 #Sai da fase e retorna para o mapa incial
 func _on_PCDexit_pressed():
+	if Global.dialogo == "cadeirante":
+		Global.para_dialogo = 16
+	if Global.dialogo == "homemNegro":
+		Global.para_dialogo = 21
+	if Global.dialogo == "genero":
+		Global.para_dialogo = 0
+	Global.add_dialogo = true
 	get_tree().change_scene("res://Scenes/World/World.tscn")
 	paused = false
 	get_tree().paused = false
