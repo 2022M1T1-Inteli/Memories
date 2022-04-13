@@ -121,6 +121,7 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 Aqui estão as referências usadas no projeto.
 
-1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
-3. <https://creativecommons.org/share-your-work/>
+1. <https://www.youtube.com/channel/UCrHQNOyU1q6BFEfkNq2CYMA/> - Canal HeartBeast
+2. <https://www.youtube.com/channel/UCrHNs9zZt72kTTO1zPxkNKA/> - Canal Afely
+3. <https://stackoverflow.com/> - Forum
+4. <https://www.reddit.com/r/godot/> - Forum
