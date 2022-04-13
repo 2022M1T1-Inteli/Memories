@@ -105,7 +105,7 @@ A cada atualização os detalhes devem ser lançados aqui.
   * REMOVE: Mapa Antigo
 * 0.1.2 - 04/03/2022
   * ADD: Sons, Tela Inicial, Sprites e elementos ao mapa principal (Casas, Ruas e NPCs)
-* * 0.1.1 - 25/02/2022
+* 0.1.1 - 25/02/2022
   * MUDANÇA: Organização das pastas
   * ADD: Imagens dos icones, mapas e avatares do jogo
 * 0.1. - 18/02/2022
