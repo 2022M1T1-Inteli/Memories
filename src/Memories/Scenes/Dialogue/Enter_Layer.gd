@@ -2,8 +2,8 @@ extends Sprite
 
 signal chamaCena
 var cena
-
 onready var Global = get_node("/root/VariaveisGlobais")
+
 func _ready():
 	var dialogo = get_tree().get_root().find_node("Player", true, false)	
 	dialogo.connect("dialogo", self, "set_is_visible")		
@@ -18,3 +18,4 @@ func _unhandled_input(event):
 		if Global.dialogoAtivo == true:
 			cena = load("res://Scenes/Dialogue/Dialogue.tscn").instance()
 			add_child(cena)
+			get_tree().paused = true

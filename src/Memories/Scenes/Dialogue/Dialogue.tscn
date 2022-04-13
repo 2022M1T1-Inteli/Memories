@@ -27,6 +27,7 @@ process_priority = 10
 layer = 10
 
 [node name="Plate" type="Sprite" parent="."]
+pause_mode = 2
 position = Vector2( 160, 136 )
 scale = Vector2( 1, 0.794 )
 texture = ExtResource( 3 )

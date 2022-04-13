@@ -57,6 +57,7 @@ func nextPhrase()->void:
 	if Global.posicao_dialogo >= len(dialog[index]["text"]):
 		Global.dialogoAtivo = true
 		Global.posicao_dialogo = 0
+		get_tree().paused = false
 		queue_free()
 	else:
 		finished = false
@@ -77,6 +78,7 @@ func nextPhrase()->void:
 		if Global.posicao_dialogo == Global.para_dialogo:
 			$TimerTrocaCena.start()
 			yield($TimerTrocaCena, "timeout")
+			get_tree().paused = false
 			if Global.dialogo == "cadeirante":
 				get_tree().change_scene("res://Scenes/Level/Cadeirante/Task/PCD-World.tscn")
 			if Global.dialogo == "homemNegro":
@@ -110,4 +112,5 @@ func verifcaDiaolog():
 		Global.posicao_dialogo = 0
 		
 func _on_No_pressed():
+	get_tree().paused = false
 	get_tree().change_scene("res://Scenes/World/World.tscn")

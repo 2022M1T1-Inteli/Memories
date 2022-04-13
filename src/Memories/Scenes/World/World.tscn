@@ -1393,7 +1393,7 @@ position = Vector2( 603, 154 )
 position = Vector2( 584, 154 )
 
 [node name="Pedra3" parent="Centro-Meio-Baixo-Direita-1" instance=ExtResource( 26 )]
-position = Vector2( 541, 157 )
+position = Vector2( 528, 157 )
 
 [node name="Pedra1" parent="Centro-Meio-Baixo-Direita-1" instance=ExtResource( 19 )]
 position = Vector2( 513, 131 )
