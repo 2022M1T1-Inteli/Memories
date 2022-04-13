@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Memories raiz"
+config/name="Memories"
 run/main_scene="res://Scenes/Animacao inicio/Animacao-inicio.tscn"
 config/icon="res://Assets/Icon/M.png"
 
