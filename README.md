@@ -100,18 +100,23 @@ Coloque código do prompt de comnando se for necessário
 
 A cada atualização os detalhes devem ser lançados aqui.
 
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.1.3 - 15/01/2022
+  * ADD: Tela Inicial, Sprites, elementos ao mapa principal (Casas, Ruas, Árvores, Pedras, Grama e NPCs) e Primeira missão do jogo
+  * REMOVE: Mapa Antigo
+* 0.1.2 - 04/02/2022
+  * ADD: Sons, Tela Inicial, Sprites e elementos ao mapa principal (Casas, Ruas e NPCs)
+* * 0.1.1 - 25/02/2022
+  * MUDANÇA: Organização das pastas
+  * ADD: Imagens dos icones, mapas e avatares do jogo
+* 0.1. - 18/01/2022
+  * UPLOAD: Primeira versão do jogo
+  * Mecânica inicial do jogo
+* 0.0.1 - 11/02/2022
+  * EDIÇÕES: GDD e no repositorio do GitHub
+* 0.0.1 - 08/02/2022
+  * Início de desenvolvimento do jogo
+  * Criação do GitHub
+<br><br>
 
 ## 📋 Licença/License
 
