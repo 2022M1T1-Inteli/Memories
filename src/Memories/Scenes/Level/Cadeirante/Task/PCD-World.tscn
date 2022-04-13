@@ -32,14 +32,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 20 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "jump",
 "speed": 5.0
 } ]
 
@@ -204,7 +204,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="memoria"]
 scale = Vector2( 0.033, 0.031 )
 frames = SubResource( 5 )
-frame = 1
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="memoria"]
@@ -221,7 +221,7 @@ __meta__ = {
 position = Vector2( 0.222656, -0.258057 )
 scale = Vector2( 0.033, 0.031 )
 frames = SubResource( 7 )
-frame = 9
+frame = 4
 playing = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="memoria2"]
@@ -239,7 +239,7 @@ __meta__ = {
 position = Vector2( 0.222656, -0.258057 )
 scale = Vector2( 0.033, 0.031 )
 frames = SubResource( 7 )
-frame = 8
+frame = 3
 playing = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="memoria3"]

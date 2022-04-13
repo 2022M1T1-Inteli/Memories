@@ -17,5 +17,6 @@ func entrou(event):
 		if Global.dialogo == "genero":
 			Global.para_dialogo = 16
 		Global.add_dialogo = true
+		Global.venceu_racial = true
 		get_tree().change_scene("res://Scenes/World/World.tscn")
 		

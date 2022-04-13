@@ -100,4 +100,5 @@ func _on_memoria3_body_entered(body):
 	if Global.dialogo == "genero":
 		Global.para_dialogo = 0
 	Global.add_dialogo = true
+	Global.venceu_pcd = true
 	get_tree().change_scene("res://Scenes/World/World.tscn")

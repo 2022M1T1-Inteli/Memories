@@ -1,8 +1,14 @@
 extends Node2D
 
-func _ready():
-	pass 
+onready var Global = get_node("/root/VariaveisGlobais")
+
 
 func _on_Start_pressed():
-	get_tree().change_scene("res://Scenes/Mensagem Inicial/Pergaminho.tscn")
-	pass 
+	
+	#mostra o tutorial se não foi visto
+	if Global.ja_viu_tutorial == false:
+		get_tree().change_scene("res://Scenes/Mensagem Inicial/Pergaminho.tscn")
+		
+	else:
+		get_tree().change_scene("res://Scenes/World/World.tscn")
+	

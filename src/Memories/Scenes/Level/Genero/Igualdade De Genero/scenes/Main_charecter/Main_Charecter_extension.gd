@@ -32,13 +32,15 @@ func _on_memoria2_body_entered(body):
 
 func _on_memoria3_body_entered(body):
 	#faz voltar da última memória a personagem
-	Global.mem +=1
+	Global.mem = 0
 	get_parent().get_node("memoria3").queue_free()
 	if Global.dialogo == "genero":
 		Global.para_dialogo = 16
 	Global.add_dialogo = true
+	Global.venceu_genero = true
 	get_tree().change_scene("res://Scenes/World/World.tscn")
 
 
+# impede o jogador de cair no abismo
 func _on_Area2D_body_entered(body):
 	get_tree().change_scene("res://Scenes/Level/Genero/Igualdade De Genero/scenes/Principal/Principal.tscn")
