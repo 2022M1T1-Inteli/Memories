@@ -30,7 +30,8 @@ func _physics_process(delta):
 	
 	isInside = false;
 	
-	print(Global.venceu_genero,Global.venceu_pcd,Global.venceu_racial)
+	if Global.venceu_genero and Global.venceu_pcd and Global.venceu_racial and not Global.ja_viu_final:
+		get_tree().change_scene("res://Scenes/Mensagem Final/Pergaminho.tscn")
 	
 	#declaração e inicial do vetor
 	var input_vector = Vector2.ZERO

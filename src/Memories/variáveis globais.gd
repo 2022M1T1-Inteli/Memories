@@ -14,5 +14,6 @@ var add_dialogo = false
 var venceu_pcd = false
 var venceu_genero = false
 var venceu_racial = false
+var ja_viu_final = false
 
 var ja_viu_tutorial = false
