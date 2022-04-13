@@ -1724,8 +1724,6 @@ position = Vector2( -152, 100 )
 [node name="Poste3" parent="Baixo-Direito-1" instance=ExtResource( 22 )]
 position = Vector2( 13, 89 )
 
-[node name="Predio" parent="Baixo-Direito-1" instance=ExtResource( 27 )]
-
 [node name="Toca" parent="Baixo-Direito-1" instance=ExtResource( 41 )]
 position = Vector2( -13, 84 )
 

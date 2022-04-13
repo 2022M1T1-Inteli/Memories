@@ -30,6 +30,8 @@ func _physics_process(delta):
 	
 	isInside = false;
 	
+	print(Global.venceu_genero,Global.venceu_pcd,Global.venceu_racial)
+	
 	#declaração e inicial do vetor
 	var input_vector = Vector2.ZERO
 	

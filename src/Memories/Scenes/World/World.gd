@@ -7,3 +7,4 @@ func _ready():
 		var cena = load("res://Scenes/Dialogue/Dialogue.tscn").instance()
 		add_child(cena)
 		get_tree().paused = true
+		print("sss")

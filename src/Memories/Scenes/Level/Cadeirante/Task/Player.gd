@@ -78,6 +78,7 @@ func _on_PCDexit_pressed():
 	if Global.dialogo == "genero":
 		Global.para_dialogo = 0
 	Global.add_dialogo = true
+	Global.venceu_pcd = true
 	get_tree().change_scene("res://Scenes/World/World.tscn")
 	paused = false
 	get_tree().paused = false

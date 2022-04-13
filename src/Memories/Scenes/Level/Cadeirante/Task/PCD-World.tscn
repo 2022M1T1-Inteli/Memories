@@ -204,7 +204,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="memoria"]
 scale = Vector2( 0.033, 0.031 )
 frames = SubResource( 5 )
-frame = 6
+frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="memoria"]
@@ -221,7 +221,7 @@ __meta__ = {
 position = Vector2( 0.222656, -0.258057 )
 scale = Vector2( 0.033, 0.031 )
 frames = SubResource( 7 )
-frame = 4
+frame = 6
 playing = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="memoria2"]
@@ -239,7 +239,7 @@ __meta__ = {
 position = Vector2( 0.222656, -0.258057 )
 scale = Vector2( 0.033, 0.031 )
 frames = SubResource( 7 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="memoria3"]

@@ -56,6 +56,7 @@ func getDialog()->Array:
 func nextPhrase()->void:
 	if Global.posicao_dialogo >= len(dialog[index]["text"]):
 		Global.dialogoAtivo = true
+		Global.add_dialogo = false
 		Global.posicao_dialogo = 0
 		get_tree().paused = false
 		queue_free()
