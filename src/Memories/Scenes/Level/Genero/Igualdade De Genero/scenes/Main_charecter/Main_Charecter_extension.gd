@@ -38,6 +38,7 @@ func _on_memoria3_body_entered(body):
 		Global.para_dialogo = 16
 	Global.add_dialogo = true
 	Global.venceu_genero = true
+	Global.posicao_celeste = Vector2(220,160)
 	get_tree().change_scene("res://Scenes/World/World.tscn")
 
 

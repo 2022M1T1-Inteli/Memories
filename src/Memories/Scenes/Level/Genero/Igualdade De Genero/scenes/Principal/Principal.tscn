@@ -98,6 +98,7 @@ position = Vector2( 644, 168 )
 position = Vector2( 532, 151 )
 
 [node name="Espinho2" parent="espinhos" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( 1026, 168 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
