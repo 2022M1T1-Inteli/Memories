@@ -12,9 +12,7 @@
 
 ## Descrição
 
-📜 Descrição curta sobre o que seu projeto faz.
-<br><br>
-Meu projeto é um exemplo de como utilizar o github.
+O jogo MEMORIES é uma plataforma 2D em que você passará por uma série de desafios para revelar partes de uma grande história.
 <br><br>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/65983794/162753737-11d2a118-fa6d-4ebd-b148-5b9169930e65.png" alt="NOME DO JOGO" border="0"><br>
