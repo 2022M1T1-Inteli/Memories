@@ -19,12 +19,10 @@ O jogo MEMORIES é uma plataforma 2D em que você passará por uma série de des
   Game by <a href="#">Amdevs</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
 </p>
 
-
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
 <br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
-<br><br>
-May the force be with you!
+<p align="justify">Você já parou pra pensar como uma alma consegue saber o que ela deve fazer ao chegar na Terra? 
+No jogo MEMORIES você irá passar exatamente por este processo, em que você será alocado em um novo ambiente onde vários aldeões estarão te esperando para revelar grandes histórias. 
+Mas para isso vários desafios deverão ser superados e você poderá progredir com as maiores personalidades da história. Você deverá escalar, pular, voar e corres por obstáculos cada vez mais desafiadores. Será que você está preparado para isso?</p>
 <br><br>
 
 ## 🛠 Estrutura de pastas
