@@ -65,8 +65,6 @@ Treinamentos de funcionarios com base no assunto de Diversidade e Inclusão, vis
 
 ## 💻 Configuração para Desenvolvimento
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
-
 Para abrir este projeto você necessita das seguintes ferramentas:
 
 -<a href="https://godotengine.org/download">GODOT</a>
@@ -76,6 +74,7 @@ make install
 npm test
 Coloque código do prompt de comnando se for necessário
 ```
+Após a instalação, execute o GODOT, procure a opção de importar, navegue até a onde se encontra os arquivos instalados e clique em abrir, após finalizar a importação basta executar o arquivo pressionando as teclas FN + F5 
 
 ## 🗃 Histórico de lançamentos
 
