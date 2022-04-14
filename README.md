@@ -54,10 +54,6 @@ Mas para isso vários desafios deverão ser superados e você poderá progredir 
 Não há instalação! Apenas executável!
 Encontre o Memories.exe na pasta executáveis e execute-o como qualquer outro programa.
 
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
 <b>HTML:</b>
 
 Não há instalação!
