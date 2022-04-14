@@ -104,7 +104,7 @@ A cada atualização os detalhes devem ser lançados aqui.
 * 0.1. - 18/02/2022
   * UPLOAD: Primeira versão do jogo
   * Mecânica inicial do jogo
-* 0.0.1 - 11/02/2022
+* 0.0.5 - 11/02/2022
   * UPDATE: GDD e no repositorio do GitHub
 * 0.0.1 - 08/02/2022
   * Início de desenvolvimento do jogo
