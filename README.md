@@ -49,15 +49,6 @@ Mas para isso vários desafios deverão ser superados e você poderá progredir 
 
 ## 🛠 Instalação
 
-<b>Android:</b>
-
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
 <b>Windows:</b>
 
 Não há instalação! Apenas executável!
@@ -74,13 +65,7 @@ Encontre o index.html na pasta executáveis e execute-o como uma página WEB (at
 
 ## 📈 Exemplo de uso
 
-Alguns exemplos interessantes e úteis sobre como seu projeto pode ser utilizado.
-
-Adicione blocos de códigos e, se necessário, screenshots.
-
-Este modelo pode ser copiado e utilizado à vontade.
-
-Através da cópia/clone/ download do repositório, altere os dados do readme.md e carregue os arquivos de seu projeto.
+Treinamentos de funcionarios com base no assunto de Diversidade e Inclusão, visando uma reflexão pessoal para os funcionarios
 
 ## 💻 Configuração para Desenvolvimento
 
@@ -99,7 +84,19 @@ Coloque código do prompt de comnando se for necessário
 ## 🗃 Histórico de lançamentos
 
 A cada atualização os detalhes devem ser lançados aqui.
-
+* 0.1.8 - 14/04/2022
+  * ADD: Tutorial e tela de finalização do jogo.
+  * UPDATE: Caixa de diálogo, personagem principal, fases e GDD
+* 0.1.7 - 08/04/2022
+  * ADD: Músicas nas fases dos NPCs, NPC da fase gênero, fase de gênero e diálogo da fase gênero.
+  * UPDATE: fase PCD, fase racial e caixa de dialogo
+* 0.1.6 - 01/04/2022
+  * ADD: Atualização na caixa de diálogo, moedas nas fases, NPC da fase PCD, fase PCD e diálogo da fase PCD
+* 0.1.5 - 25/03/2022
+  * ADD: Botão de Pause, NPC da fase racial, fase racial e diálogo da fase racial
+* 0.1.4 - 18/03/2022
+  * ADD: Atualizações nos executáveis
+  * REMOVE: Versões antigas dos executáveis
 * 0.1.3 - 15/03/2022
   * ADD: Tela Inicial, Sprites, elementos ao mapa principal (Casas, Ruas, Árvores, Pedras, Grama e NPCs) e Primeira missão do jogo
   * REMOVE: Mapa Antigo
@@ -107,12 +104,12 @@ A cada atualização os detalhes devem ser lançados aqui.
   * ADD: Sons, Tela Inicial, Sprites e elementos ao mapa principal (Casas, Ruas e NPCs)
 * 0.1.1 - 25/02/2022
   * MUDANÇA: Organização das pastas
-  * ADD: Imagens dos icones, mapas e avatares do jogo
+  * ADD: Imagens dos ícones, mapas e avatares do jogo
 * 0.1. - 18/02/2022
   * UPLOAD: Primeira versão do jogo
   * Mecânica inicial do jogo
 * 0.0.1 - 11/02/2022
-  * EDIÇÕES: GDD e no repositorio do GitHub
+  * UPDATE: GDD e no repositorio do GitHub
 * 0.0.1 - 08/02/2022
   * Início de desenvolvimento do jogo
   * Criação do GitHub
