@@ -10,6 +10,13 @@
 
 ## Integrantes: <a href="//linkedin.com/in/alberto-da-rocha-miranda-614315232/">Alberto Rocha Miranda</a>, <a href="//linkedin.com/in/erik-bonn-freundt-119619210/">Erik Bonn Freundt</a>, <a href="//linkedin.com/in/fernando-tavares-bertholdo-199b60173/">Fernando Tavares Bertholdo</a>, <a href="//linkedin.com/in/gustavo-ferreira-aa8050220/">Gustavo Ferreira de Oliveira</a>, <a href="//linkedin.com/in/luiz-felipe-kama-alencar-722935142/">Luiz Felipe Kama Alencar</a>, <a href="//linkedin.com/in/mariana-lema-9861ba21b/">Mariana Lema</a>, <a href="//linkedin.com/in/rafael-alves-cabral/">Rafael Alves Cabral</a>
 
+## Professores Orientadores: 
+<a href="http://lattes.cnpq.br/2716416791407528" target="_blank" rel="noopener noreferrer"> Flavio Marques Azevedo </a>, 
+<a href="http://lattes.cnpq.br/9324969584977927" target="_blank" rel="noopener noreferrer"> Laíza Ribeiro </a>, 
+<a href="http://lattes.cnpq.br/2951162577564329" target="_blank" rel="noopener noreferrer"> Pedro Teberga</a>, 
+<a href="http://lattes.cnpq.br/2327073767433655" target="_blank" rel="noopener noreferrer"> Ricardo Missori </a>,
+<a href="http://lattes.cnpq.br/3254174044411983" target="_blank" rel="noopener noreferrer"> Victor Bruno Alexander Rosetti de Quiroz </a>
+
 ## Descrição
 
 O jogo MEMORIES é uma plataforma 2D em que você passará por uma série de desafios para revelar partes de uma grande história.
