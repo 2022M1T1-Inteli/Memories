@@ -40,7 +40,7 @@ Mas para isso vários desafios deverão ser superados e você poderá progredir 
     📦Projeto 2
 &emsp;|--> apresentações<br>
 &emsp;|--> documentos<br>
-    &emsp;&emsp;&emsp;Aqui estará toda a documentação do projeto, contendo toda a contextualização do projeto<br><br>
+    &emsp;&emsp;&emsp;Aqui estará toda a documentação do projeto, contendo toda a contextualização do projeto<br>
 &emsp;|-->antigos<br>
 &emsp;|-->GDD.docx ou Documentação.docx<br>
 💻executáveis<br>
@@ -48,11 +48,6 @@ Mas para isso vários desafios deverão ser superados e você poderá progredir 
   &emsp;📁|-->HTML<br>
 📷|-->imagens<br>
 💾|-->src<br>
-&emsp;📎|-->Memories<br>
-&emsp;📎|-->Assets<br>
-&emsp;📎|-->Json<br>
-&emsp;📎|-->Scenes<br>
-  
 📄|readme.md<br>
 📜|license.txt<br>
 
