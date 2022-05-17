@@ -4,11 +4,16 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do Projeto
+<h1>Memories</h1>
 
-## Nome do Grupo
-
-## Integrantes: <a href="//linkedin.com/in/alberto-da-rocha-miranda-614315232/">Alberto Rocha Miranda</a>, <a href="//linkedin.com/in/erik-bonn-freundt-119619210/">Erik Bonn Freundt</a>, <a href="//linkedin.com/in/fernando-tavares-bertholdo-199b60173/">Fernando Tavares Bertholdo</a>, <a href="//linkedin.com/in/gustavo-ferreira-aa8050220/">Gustavo Ferreira de Oliveira</a>, <a href="//linkedin.com/in/luiz-felipe-kama-alencar-722935142/">Luiz Felipe Kama Alencar</a>, <a href="//linkedin.com/in/mariana-lema-9861ba21b/">Mariana Lema</a>, <a href="//linkedin.com/in/rafael-alves-cabral/">Rafael Alves Cabral</a>
+Integrantes:
+- <a href="//linkedin.com/in/alberto-da-rocha-miranda-614315232/">Alberto Rocha Miranda</a>
+- <a href="//linkedin.com/in/erik-bonn-freundt-119619210/">Erik Bonn Freundt</a>
+- <a href="//linkedin.com/in/fernando-tavares-bertholdo-199b60173/">Fernando Tavares Bertholdo</a>
+- <a href="//linkedin.com/in/gustavo-ferreira-aa8050220/">Gustavo Ferreira de Oliveira</a>
+- <a href="//linkedin.com/in/luiz-felipe-kama-alencar-722935142/">Luiz Felipe Kama Alencar</a>
+- <a href="//linkedin.com/in/mariana-lema-9861ba21b/">Mariana Lema</a>
+- <a href="//linkedin.com/in/rafael-alves-cabral/">Rafael Alves Cabral</a>
 
 ## Professores Orientadores: 
 <a href="http://lattes.cnpq.br/2716416791407528" target="_blank" rel="noopener noreferrer"> Flavio Marques Azevedo </a>, 
@@ -30,42 +35,58 @@ O jogo MEMORIES é uma plataforma 2D em que você passará por uma série de des
 <p align="justify">Você já parou pra pensar como uma alma consegue saber o que ela deve fazer ao chegar na Terra? 
 No jogo MEMORIES você irá passar exatamente por este processo, em que você será alocado em um novo ambiente onde vários aldeões estarão te esperando para revelar grandes histórias. 
 Mas para isso vários desafios deverão ser superados e você poderá progredir com as maiores personalidades da história. Você deverá escalar, pular, voar e corres por obstáculos cada vez mais desafiadores. Será que você está preparado para isso?</p>
-<br><br>
+<br>
 
-## 🛠 Estrutura de pastas
-
--Raiz<br>
-|<br>
-|-->apresentações<br>
-|-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|GDD.docx ou Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
-|-->imagens<br>
-|-->src<br>
-  &emsp;|-->Memories<br>
-    &emsp;&emsp;|-->Assets<br>
-    &emsp;&emsp;|-->Json<br>
-    &emsp;&emsp;|-->Scenes<br>
+    📦Projeto 2
+&emsp;|--> apresentações<br>
+&emsp;|--> documentos<br>
+    &emsp;&emsp;&emsp;Aqui estará toda a documentação do projeto, contendo toda a contextualização do projeto<br><br>
+&emsp;|-->antigos<br>
+&emsp;|-->GDD.docx ou Documentação.docx<br>
+💻executáveis<br>
+  &emsp;📁|-->windows<br>
+  &emsp;📁|-->HTML<br>
+📷|-->imagens<br>
+💾|-->src<br>
+&emsp;📎|-->Memories<br>
+&emsp;📎|-->Assets<br>
+&emsp;📎|-->Json<br>
+&emsp;📎|-->Scenes<br>
   
-|readme.md<br>
-|license.txt<br>
+📄|readme.md<br>
+📜|license.txt<br>
+
+A pasta raiz contém um arquivo principal:
+
+- <b>readme.md</b>, que consiste em um guia geral sobre o projeto.
+
+E, também, 4 subpastas que se organizam da seguinte forma:
+
+- <b>documentos</b>, ondem encontram-se todos os documentos relacionados ao projeto, sobretudo o Game Design Document (GDD), com uma subpasta <b>antigos</b> que armazena versões anteriores dos mesmos.
+
+- <b>executáveis</b>, ondem encontram-se todos os executáveis do jogo, prontos para rodar, com 2 pastas: uma para binários windows e uma para a web.
+
+- <b>imagens</b>, ondem encontram-se algumas imagens relacionadas ao jogo, sistema e logos, prontos para serem utilizados e visualizados.
+
+- <b>src</b>, onde encontra-se todo o código fonte do jogo/sistema, pronto para para ser baixado e modificado.
 
 ## 🛠 Instalação
-
 <b>Windows:</b>
+Não há instalação, apenas executável. Baixe os arquivos disponíveis em https://github.com/2022M1T1/Projeto2/tree/main/execut%C3%A1veis/Windows e execute "Memories.exe" como qualquer outro programa.
 
-Não há instalação! Apenas executável!
-Encontre o Memories.exe na pasta executáveis e execute-o como qualquer outro programa.
+```
+Observe que é necessário que o arquivo "Memories.pck" esteja
+no mesmo diretório que "Memories.exe" para que o jogo inicie
+corretamente.
+```
 
 <b>HTML:</b>
 
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+Não há instalação! Baixe os arquivos disponíveis em https://github.com/2022M1T1/Projeto2/tree/main/execut%C3%A1veis/HTML e execute-o como uma página da web (através de algum navegador).
 
+```sh
+Dependendo de suas configurações de firewall, talvez seja necessário instaurar um web service como xampp ou wampp para que o jogo rode localmente.
+```
 ## 📈 Exemplo de uso
 
 Treinamentos de funcionarios com base no assunto de Diversidade e Inclusão, visando uma reflexão pessoal para os funcionarios
@@ -76,13 +97,15 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 -<a href="https://godotengine.org/download">GODOT</a>
 
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
+Instruções para a configuração do ambiente de desenvolvimento:
 ```
-Após a instalação, execute o GODOT, procure a opção de importar, navegue até a onde se encontra os arquivos instalados e clique em abrir, após finalizar a importação basta executar o arquivo pressionando as teclas FN + F5 
-
+1) Clone o repositório.
+2) Abra a engine de desenvolvimento (godot).
+3) No gerenciador de projetos inicial, clique no botão "importar" e, em seguida, no botão "navegar".
+4) Navegue até o repositório clonado e abra a pasta "src".
+5) Selecione o arquivo "project.godot" e em seguida clique no botão "abrir".
+6) Pronto. O seu ambiente de desenvolvimento está configurado.
+```
 ## 🗃 Histórico de lançamentos
 
 A cada atualização os detalhes devem ser lançados aqui.
