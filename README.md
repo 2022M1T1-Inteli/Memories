@@ -37,19 +37,18 @@ No jogo MEMORIES você irá passar exatamente por este processo, em que você se
 Mas para isso vários desafios deverão ser superados e você poderá progredir com as maiores personalidades da história. Você deverá escalar, pular, voar e corres por obstáculos cada vez mais desafiadores. Será que você está preparado para isso?</p>
 <br>
 
-    📦Projeto 2
+    Projeto 2
 &emsp;|--> apresentações<br>
 &emsp;|--> documentos<br>
-    &emsp;&emsp;&emsp;Aqui estará toda a documentação do projeto, contendo toda a contextualização do projeto<br>
 &emsp;|-->antigos<br>
-&emsp;|-->GDD.docx ou Documentação.docx<br>
-💻executáveis<br>
-  &emsp;📁|-->windows<br>
-  &emsp;📁|-->HTML<br>
-📷|-->imagens<br>
-💾|-->src<br>
-📄|readme.md<br>
-📜|license.txt<br>
+&emsp;|-->GDD - grupo 2 - versao 1.7.pdf<br>
+executáveis<br>
+  &emsp;|-->windows<br>
+  &emsp;|-->HTML<br>
+|-->imagens<br>
+|-->src<br>
+|readme.md<br>
+|license.txt<br>
 
 A pasta raiz contém um arquivo principal:
 
